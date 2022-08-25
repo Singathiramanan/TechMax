@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regional]">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="Browser" value="chrome"/>
+    <classes>
+      <class name="com.Techmax.Transaction.AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProduct">
+        <methods>
+          <include name="AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProductTest"/>
+          <include name="configBM"/>
+          <include name="configAM"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="configAS"/>
+          <include name="configAC"/>
+        </methods>
+      </class> <!-- com.Techmax.Transaction.AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProduct -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Regional] -->

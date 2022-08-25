@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regional">
+	<test thread-count="5" name="Test">
+	  <parameter name="Browser" value="chrome"></parameter>
+		<classes>
+			<class
+				name="com.Techmax.Transaction.TransactionTest">
+				<methods>
+					<include
+						name="AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProducttest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Regional -->

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [BatchSuite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.Techmax.POS.Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details">
+        <methods>
+          <include name="configBM"/>
+          <include name="configAM"/>
+          <include name="Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="configAS"/>
+          <include name="configAC"/>
+        </methods>
+      </class> <!-- com.Techmax.POS.Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details -->
+      <class name="com.Techmax.POS.sale_a_product_check_the_transaction_details">
+        <methods>
+          <include name="configBM"/>
+          <include name="configAM"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="configAS"/>
+          <include name="configAC"/>
+          <include name="sale_a_product_check_the_transaction_details_test"/>
+        </methods>
+      </class> <!-- com.Techmax.POS.sale_a_product_check_the_transaction_details -->
+      <class name="com.Techmax.Inventory.VerifySupplierNameInAddProduct">
+        <methods>
+          <include name="configBM"/>
+          <include name="VerifySupplierNameInAddProduct_test"/>
+          <include name="configAM"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="configAS"/>
+          <include name="configAC"/>
+        </methods>
+      </class> <!-- com.Techmax.Inventory.VerifySupplierNameInAddProduct -->
+      <class name="com.Techmax.Transaction.AddProductLoginAsEmployeeGenrateBillInPOSforProduct">
+        <methods>
+          <include name="configBM"/>
+          <include name="AddProductLoginAsEmployeeGenrateBillInPOSforProductTest"/>
+          <include name="configAM"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="configAS"/>
+          <include name="configAC"/>
+        </methods>
+      </class> <!-- com.Techmax.Transaction.AddProductLoginAsEmployeeGenrateBillInPOSforProduct -->
+      <class name="com.Techmax.Home.CreateNewProductVerifyTheProductCountInHomePage">
+        <methods>
+          <include name="configBM"/>
+          <include name="configAM"/>
+          <include name="CreateNewProductVerifyTheProductCountInHomePage_test"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="configAS"/>
+          <include name="configAC"/>
+        </methods>
+      </class> <!-- com.Techmax.Home.CreateNewProductVerifyTheProductCountInHomePage -->
+      <class name="com.Techmax.Transaction.AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProduct">
+        <methods>
+          <include name="AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProductTest"/>
+          <include name="configBM"/>
+          <include name="configAM"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="configAS"/>
+          <include name="configAC"/>
+        </methods>
+      </class> <!-- com.Techmax.Transaction.AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProduct -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [BatchSuite] -->
