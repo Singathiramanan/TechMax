@@ -13,7 +13,7 @@ import com.TechMax.Pomrepositorylib.SingletonDesignPattern;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
-	public WebDriver driver=null;
+	public static WebDriver driver=null;
 	public static WebDriver sdriver=null;
 	/*Object Creation for Lib*/
 	public JavaUtility jLib = new JavaUtility();
@@ -42,6 +42,7 @@ public class BaseClass {
 	}
 	sdriver=driver;
 	}
+	
 	@BeforeMethod(groups={"SmokeTesting","RegressionTesting"})
 	public void configBM() throws Throwable {
 	/*common Data*/

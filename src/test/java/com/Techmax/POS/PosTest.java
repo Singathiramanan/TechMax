@@ -13,7 +13,7 @@ import com.TechMax.utility.BaseClass;
 
 public class PosTest extends BaseClass {
 	
-	@Test(groups="SmokeTest",enabled=false)
+	@Test(groups="SmokeTest",enabled=true)
 	public void Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test() throws Throwable{
 		String ran = jLib.getRanDomNumber();
 		// Fetching data from excel

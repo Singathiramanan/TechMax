@@ -12,7 +12,7 @@ import com.TechMax.utility.BaseClass;
 
 public class InventoryTest extends BaseClass {
 	
-	@Test(groups="RegressionTest")
+	@Test(groups="RegressionTest"/*expectedExceptions=NullPointerException.class,timeOut=3000*/)
 	public void VerifySupplierNameInAddProduct_test() throws Throwable{
 		String ran = jLib.getRanDomNumber();
 

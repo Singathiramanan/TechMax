@@ -61,7 +61,7 @@
 							<version>3.0.0-M7</version>
 							<configuration>
 								<suiteXmlFiles>
-									<suiteXmlFile>sample.xml</suiteXmlFile>
+									<suiteXmlFile>batchSuite.xml</suiteXmlFile>
 								</suiteXmlFiles>
 							</configuration>
 						</plugin>
