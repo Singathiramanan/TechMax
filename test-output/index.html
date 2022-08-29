@@ -5,8 +5,9 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -23,22 +24,23 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" panel-name="suite-BatchSuite" class="navigator-link">
+              <span class="suite-name border-failed">BatchSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Umamani\AppData\Local\Temp\testng-eclipse-2088771831\testng-customsuite.xml</span>
+                  <a href="#" panel-name="test-xml-BatchSuite" class="navigator-link ">
+                    <span>C:\Users\Dell\git\TechMax\BatchTestng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                  <a href="#" panel-name="testlist-BatchSuite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>1 group</span>
+                  <a href="#" panel-name="group-BatchSuite" class="navigator-link ">
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                  <a href="#" panel-name="times-BatchSuite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                  <a href="#" panel-name="reporter-BatchSuite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                  <a href="#" panel-name="ignored-methods-BatchSuite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                  <a href="#" panel-name="chronological-BatchSuite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,21 +93,113 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">14 methods, 1 failed,  4 skipped,  9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-BatchSuite" class="hide-methods failed suite-BatchSuite"> (hide)</a> <!-- hide-methods failed suite-BatchSuite -->
+                      <a href="#" panel-name="suite-BatchSuite" class="show-methods failed suite-BatchSuite"> (show)</a> <!-- show-methods failed suite-BatchSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-BatchSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BatchSuite" title="com.Techmax.POS.PosTest" class="method navigator-link" hash-for-method="Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test">Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-BatchSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-BatchSuite" class="hide-methods skipped suite-BatchSuite"> (hide)</a> <!-- hide-methods skipped suite-BatchSuite -->
+                      <a href="#" panel-name="suite-BatchSuite" class="show-methods skipped suite-BatchSuite"> (show)</a> <!-- show-methods skipped suite-BatchSuite -->
+                    </span>
+                    <div class="method-list-content skipped suite-BatchSuite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-BatchSuite" title="com.Techmax.POS.PosTest" class="method navigator-link" hash-for-method="Verify_data_flow_from_Customer_to_pos_Test">Verify_data_flow_from_Customer_to_pos_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-BatchSuite" title="com.Techmax.POS.PosTest" class="method navigator-link" hash-for-method="sale_a_product_check_the_transaction_details_test">sale_a_product_check_the_transaction_details_test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-BatchSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-BatchSuite" class="hide-methods skipped suite-BatchSuite"> (hide)</a> <!-- hide-methods skipped suite-BatchSuite -->
+                      <a href="#" panel-name="suite-BatchSuite" class="show-methods skipped suite-BatchSuite"> (show)</a> <!-- show-methods skipped suite-BatchSuite -->
+                    </span>
+                    <div class="method-list-content skipped suite-BatchSuite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-BatchSuite" title="com.Techmax.POS.PosTest" class="method navigator-link" hash-for-method="Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test">Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-BatchSuite" title="com.Techmax.POS.PosTest" class="method navigator-link" hash-for-method="Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test">Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-BatchSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-BatchSuite" class="hide-methods passed suite-BatchSuite"> (hide)</a> <!-- hide-methods passed suite-BatchSuite -->
+                      <a href="#" panel-name="suite-BatchSuite" class="show-methods passed suite-BatchSuite"> (show)</a> <!-- show-methods passed suite-BatchSuite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content passed suite-BatchSuite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.Techmax.POS.PosTest" hash-for-method="Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test">Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BatchSuite" title="com.Techmax.Transaction.TransactionTest" class="method navigator-link" hash-for-method="AddProductLoginAsEmployeeGenrateBillInPOSforProduct_test">AddProductLoginAsEmployeeGenrateBillInPOSforProduct_test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BatchSuite" title="com.Techmax.POS.PosTest" class="method navigator-link" hash-for-method="AddSupplierAddProductGenrateBillInPOSforProductTest">AddSupplierAddProductGenrateBillInPOSforProductTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BatchSuite" title="com.Techmax.Transaction.TransactionTest" class="method navigator-link" hash-for-method="AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProducttest">AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProducttest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BatchSuite" title="com.Techmax.POS.PosTest" class="method navigator-link" hash-for-method="Add_a_new_product_and_purchase_the_same_product_Test">Add_a_new_product_and_purchase_the_same_product_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BatchSuite" title="com.Techmax.Accounts.AccountsTest" class="method navigator-link" hash-for-method="CreateCredentialsForExistingEmployeesInAccountsPageTest">CreateCredentialsForExistingEmployeesInAccountsPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BatchSuite" title="com.Techmax.Accounts.AccountsTest" class="method navigator-link" hash-for-method="CreateEmployeeInEmployeePageCheckEmployeeDisplayedInAccountsPageInAddUserAcoountLayoutTest">CreateEmployeeInEmployeePageCheckEmployeeDisplayedInAccountsPageInAddUserAcoountLayoutTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BatchSuite" title="com.Techmax.Home.HomeTest" class="method navigator-link" hash-for-method="CreateNewProductVerifyTheProductCountInHomePage_test">CreateNewProductVerifyTheProductCountInHomePage_test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BatchSuite" title="com.Techmax.Home.HomeTest" class="method navigator-link" hash-for-method="CreateNewRegistrationVerifyTheRegistrationCountInHomePageTest">CreateNewRegistrationVerifyTheRegistrationCountInHomePageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BatchSuite" title="com.Techmax.Inventory.InventoryTest" class="method navigator-link" hash-for-method="VerifySupplierNameInAddProduct_test">VerifySupplierNameInAddProduct_test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-BatchSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,10 +210,10 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-BatchSuite" class="panel BatchSuite">
+          <div class="suite-BatchSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.Techmax.POS.PosTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,107 +222,488 @@
                   <a name="Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test">
                   </a> <!-- Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test -->
                   <span class="method-name">Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=104.0.5112.102)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-BOQM7D0&apos;, ip: &apos;192.168.0.156&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.20 (9ac43f954ebb..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63840}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 13f1ac556373222a6ce4d45337786be6
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
+	at com.Techmax.POS.PosTest.Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test(PosTest.java:56)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-BatchSuite-class-failed -->
+          <div class="suite-BatchSuite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.Techmax.POS.PosTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test">
+                  </a> <!-- Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test -->
+                  <span class="method-name">Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=104.0.5112.102)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-BOQM7D0&apos;, ip: &apos;192.168.0.156&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.20 (9ac43f954ebb..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63840}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 13f1ac556373222a6ce4d45337786be6
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
+	at com.TechMax.Pomrepositorylib.PosPage.addCustomer(PosPage.java:156)
+	at com.Techmax.POS.PosTest.Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test(PosTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test">
+                  </a> <!-- Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test -->
+                  <span class="method-name">Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=104.0.5112.102)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-BOQM7D0&apos;, ip: &apos;192.168.0.156&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.20 (9ac43f954ebb..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63840}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 13f1ac556373222a6ce4d45337786be6
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
+	at com.TechMax.Pomrepositorylib.PosPage.addCustomer(PosPage.java:156)
+	at com.Techmax.POS.PosTest.Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test(PosTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Verify_data_flow_from_Customer_to_pos_Test">
+                  </a> <!-- Verify_data_flow_from_Customer_to_pos_Test -->
+                  <span class="method-name">Verify_data_flow_from_Customer_to_pos_Test</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;nav-link dropdown-toggle&quot; href=&quot;#&quot; id=&quot;userDropdown&quot; role=&quot;button&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;...&lt;/a&gt; is not clickable at point (1176, 35). Other element would receive the click: &lt;div class=&quot;modal fade show&quot; id=&quot;aModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;exampleModalLabel&quot; aria-modal=&quot;true&quot; style=&quot;padding-right: 17px; display: block;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=104.0.5112.102)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-BOQM7D0&apos;, ip: &apos;192.168.0.156&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.20 (9ac43f954ebb..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63840}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 13f1ac556373222a6ce4d45337786be6
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+	at com.TechMax.Pomrepositorylib.LoginPage.LogoutToApplication(LoginPage.java:92)
+	at com.TechMax.utility.BaseClass.configAM(BaseClass.java:60)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 40 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sale_a_product_check_the_transaction_details_test">
+                  </a> <!-- sale_a_product_check_the_transaction_details_test -->
+                  <span class="method-name">sale_a_product_check_the_transaction_details_test</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;nav-link dropdown-toggle&quot; href=&quot;#&quot; id=&quot;userDropdown&quot; role=&quot;button&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;...&lt;/a&gt; is not clickable at point (1176, 35). Other element would receive the click: &lt;div class=&quot;modal fade show&quot; id=&quot;aModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;exampleModalLabel&quot; aria-modal=&quot;true&quot; style=&quot;padding-right: 17px; display: block;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=104.0.5112.102)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-BOQM7D0&apos;, ip: &apos;192.168.0.156&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.20 (9ac43f954ebb..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63840}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 13f1ac556373222a6ce4d45337786be6
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+	at com.TechMax.Pomrepositorylib.LoginPage.LogoutToApplication(LoginPage.java:92)
+	at com.TechMax.utility.BaseClass.configAM(BaseClass.java:60)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 40 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BatchSuite-class-skipped -->
+          <div class="suite-BatchSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.Techmax.Home.HomeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateNewProductVerifyTheProductCountInHomePage_test">
+                  </a> <!-- CreateNewProductVerifyTheProductCountInHomePage_test -->
+                  <span class="method-name">CreateNewProductVerifyTheProductCountInHomePage_test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateNewRegistrationVerifyTheRegistrationCountInHomePageTest">
+                  </a> <!-- CreateNewRegistrationVerifyTheRegistrationCountInHomePageTest -->
+                  <span class="method-name">CreateNewRegistrationVerifyTheRegistrationCountInHomePageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BatchSuite-class-passed -->
+          <div class="suite-BatchSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.Techmax.Inventory.InventoryTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifySupplierNameInAddProduct_test">
+                  </a> <!-- VerifySupplierNameInAddProduct_test -->
+                  <span class="method-name">VerifySupplierNameInAddProduct_test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BatchSuite-class-passed -->
+          <div class="suite-BatchSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.Techmax.Accounts.AccountsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateCredentialsForExistingEmployeesInAccountsPageTest">
+                  </a> <!-- CreateCredentialsForExistingEmployeesInAccountsPageTest -->
+                  <span class="method-name">CreateCredentialsForExistingEmployeesInAccountsPageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateEmployeeInEmployeePageCheckEmployeeDisplayedInAccountsPageInAddUserAcoountLayoutTest">
+                  </a> <!-- CreateEmployeeInEmployeePageCheckEmployeeDisplayedInAccountsPageInAddUserAcoountLayoutTest -->
+                  <span class="method-name">CreateEmployeeInEmployeePageCheckEmployeeDisplayedInAccountsPageInAddUserAcoountLayoutTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BatchSuite-class-passed -->
+          <div class="suite-BatchSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.Techmax.POS.PosTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddSupplierAddProductGenrateBillInPOSforProductTest">
+                  </a> <!-- AddSupplierAddProductGenrateBillInPOSforProductTest -->
+                  <span class="method-name">AddSupplierAddProductGenrateBillInPOSforProductTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Add_a_new_product_and_purchase_the_same_product_Test">
+                  </a> <!-- Add_a_new_product_and_purchase_the_same_product_Test -->
+                  <span class="method-name">Add_a_new_product_and_purchase_the_same_product_Test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BatchSuite-class-passed -->
+          <div class="suite-BatchSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.Techmax.Transaction.TransactionTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddProductLoginAsEmployeeGenrateBillInPOSforProduct_test">
+                  </a> <!-- AddProductLoginAsEmployeeGenrateBillInPOSforProduct_test -->
+                  <span class="method-name">AddProductLoginAsEmployeeGenrateBillInPOSforProduct_test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProducttest">
+                  </a> <!-- AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProducttest -->
+                  <span class="method-name">AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProducttest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BatchSuite-class-passed -->
+        </div> <!-- panel BatchSuite -->
+        <div panel-name="test-xml-BatchSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Umamani\AppData\Local\Temp\testng-eclipse-2088771831\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Dell\git\TechMax\BatchTestng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;BatchSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.Techmax.POS.PosTest&quot;/&gt;
+      &lt;class name=&quot;com.Techmax.Transaction.TransactionTest&quot;/&gt;
+      &lt;class name=&quot;com.Techmax.Home.HomeTest&quot;/&gt;
+      &lt;class name=&quot;com.Techmax.Inventory.InventoryTest&quot;/&gt;
+      &lt;class name=&quot;com.Techmax.Accounts.AccountsTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- BatchSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-BatchSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for BatchSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Test (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-BatchSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for BatchSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">SmokeTesting</span>
+              <span class="test-group-name">RegressionTest</span>
               <br/>
               <div class="method-in-group">
+                <span class="method-in-group-name">AddSupplierAddProductGenrateBillInPOSforProductTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProducttest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">CreateNewProductVerifyTheProductCountInHomePage_test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">VerifySupplierNameInAddProduct_test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">sale_a_product_check_the_transaction_details_test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">SmokeTest</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">AddProductLoginAsEmployeeGenrateBillInPOSforProduct_test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">Add_a_new_product_and_purchase_the_same_product_Test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">CreateCredentialsForExistingEmployeesInAccountsPageTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">CreateEmployeeInEmployeePageCheckEmployeeDisplayedInAccountsPageInAddUserAcoountLayoutTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">CreateNewRegistrationVerifyTheRegistrationCountInHomePageTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">Verify_data_flow_from_Customer_to_pos_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-BatchSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for BatchSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_BatchSuite');
+function tableData_BatchSuite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(14);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test')
 data.setCell(0, 2, 'com.Techmax.POS.PosTest')
-data.setCell(0, 3, 48827);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(0, 3, 34569);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test')
+data.setCell(1, 2, 'com.Techmax.POS.PosTest')
+data.setCell(1, 3, 33795);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'CreateEmployeeInEmployeePageCheckEmployeeDisplayedInAccountsPageInAddUserAcoountLayoutTest')
+data.setCell(2, 2, 'com.Techmax.Accounts.AccountsTest')
+data.setCell(2, 3, 21528);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProducttest')
+data.setCell(3, 2, 'com.Techmax.Transaction.TransactionTest')
+data.setCell(3, 3, 14263);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'AddSupplierAddProductGenrateBillInPOSforProductTest')
+data.setCell(4, 2, 'com.Techmax.POS.PosTest')
+data.setCell(4, 3, 12210);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'AddProductLoginAsEmployeeGenrateBillInPOSforProduct_test')
+data.setCell(5, 2, 'com.Techmax.Transaction.TransactionTest')
+data.setCell(5, 3, 11137);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'VerifySupplierNameInAddProduct_test')
+data.setCell(6, 2, 'com.Techmax.Inventory.InventoryTest')
+data.setCell(6, 3, 6981);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'Add_a_new_product_and_purchase_the_same_product_Test')
+data.setCell(7, 2, 'com.Techmax.POS.PosTest')
+data.setCell(7, 3, 5314);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'CreateNewProductVerifyTheProductCountInHomePage_test')
+data.setCell(8, 2, 'com.Techmax.Home.HomeTest')
+data.setCell(8, 3, 3442);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test')
+data.setCell(9, 2, 'com.Techmax.POS.PosTest')
+data.setCell(9, 3, 2459);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'CreateNewRegistrationVerifyTheRegistrationCountInHomePageTest')
+data.setCell(10, 2, 'com.Techmax.Home.HomeTest')
+data.setCell(10, 3, 2029);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'CreateCredentialsForExistingEmployeesInAccountsPageTest')
+data.setCell(11, 2, 'com.Techmax.Accounts.AccountsTest')
+data.setCell(11, 3, 1527);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'sale_a_product_check_the_transaction_details_test')
+data.setCell(12, 2, 'com.Techmax.POS.PosTest')
+data.setCell(12, 3, 0);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'Verify_data_flow_from_Customer_to_pos_Test')
+data.setCell(13, 2, 'com.Techmax.POS.PosTest')
+data.setCell(13, 3, 0);
+window.suiteTableData['BatchSuite']= { tableData: data, tableDiv: 'times-div-BatchSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 48 seconds</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <div id="times-div-BatchSuite">
+              </div> <!-- times-div-BatchSuite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-BatchSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for BatchSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-BatchSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">8 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.Techmax.POS.PosTest</span>
+              <span class="ignored-class-name">com.Techmax.Home.HomeTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">sale_a_product_check_the_transaction_details_test</span>
+                <span class="ignored-method-name">configBS</span>
+                <br/>
+                <span class="ignored-method-name">configAS</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.Techmax.Inventory.InventoryTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">configBS</span>
+                <br/>
+                <span class="ignored-method-name">configAS</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.Techmax.Accounts.AccountsTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">configBS</span>
+                <br/>
+                <span class="ignored-method-name">configAS</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.Techmax.Transaction.TransactionTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">configBS</span>
+                <br/>
+                <span class="ignored-method-name">configAS</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-BatchSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -241,31 +716,239 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">configBC</span>
-                <span class="method-start">26 ms</span>
+                <span class="method-start">39 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">configBM</span>
-                <span class="method-start">2792 ms</span>
+                <span class="method-start">2543 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test</span>
-                <span class="method-start">33654 ms</span>
+                <span class="method-name">AddSupplierAddProductGenrateBillInPOSforProductTest</span>
+                <span class="method-start">3164 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">configAM</span>
-                <span class="method-start">82483 ms</span>
+                <span class="method-start">15384 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">16255 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Add_a_new_product_and_purchase_the_same_product_Test</span>
+                <span class="method-start">16693 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">22008 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">22663 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test</span>
+                <span class="method-start">23011 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">57580 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">58106 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test</span>
+                <span class="method-start">58510 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">92305 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">92858 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test</span>
+                <span class="method-start">93216 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">configAM</span>
+                <span class="method-start">96097 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">97184 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Verify_data_flow_from_Customer_to_pos_Test</span>
+                <span class="method-start">97200 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">97209 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">97209 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">sale_a_product_check_the_transaction_details_test</span>
+                <span class="method-start">97209 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">97223 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">configAC</span>
-                <span class="method-start">87842 ms</span>
+                <span class="method-start">97225 ms</span>
               </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.Techmax.Transaction.TransactionTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configBC</span>
+                <span class="method-start">97229 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">98492 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">AddProductLoginAsEmployeeGenrateBillInPOSforProduct_test</span>
+                <span class="method-start">98990 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">110129 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">110565 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProducttest</span>
+                <span class="method-start">110943 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">125207 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">configAC</span>
+                <span class="method-start">125687 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.Techmax.Home.HomeTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configBC</span>
+                <span class="method-start">125889 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">127144 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateNewProductVerifyTheProductCountInHomePage_test</span>
+                <span class="method-start">127640 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">131083 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">131510 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateNewRegistrationVerifyTheRegistrationCountInHomePageTest</span>
+                <span class="method-start">131815 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">133845 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">configAC</span>
+                <span class="method-start">134283 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.Techmax.Inventory.InventoryTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configBC</span>
+                <span class="method-start">134419 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">135570 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">VerifySupplierNameInAddProduct_test</span>
+                <span class="method-start">136050 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">143032 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">configAC</span>
+                <span class="method-start">143510 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.Techmax.Accounts.AccountsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configBC</span>
+                <span class="method-start">143678 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">144854 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateCredentialsForExistingEmployeesInAccountsPageTest</span>
+                <span class="method-start">145388 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">146916 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">147422 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateEmployeeInEmployeePageCheckEmployeeDisplayedInAccountsPageInAddUserAcoountLayoutTest</span>
+                <span class="method-start">147713 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">169243 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">configAC</span>
+                <span class="method-start">169743 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.Techmax.POS.PosTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">configAS</span>
-                <span class="method-start">88612 ms</span>
+                <span class="method-start">169967 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

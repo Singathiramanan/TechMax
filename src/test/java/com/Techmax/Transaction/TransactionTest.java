@@ -11,10 +11,10 @@ import com.TechMax.utility.BaseClass;
 
 public class TransactionTest extends BaseClass{
 
-	@Test(groups="SmokeTest")
+	@Test(groups="SmokeTest", enabled = true, retryAnalyzer = com.TechMax.utility.RetryAnalyzerImp.class)
 	public void AddProductLoginAsEmployeeGenrateBillInPOSforProduct_test() throws Throwable {
 
-		String ran = jLib.getRanDomNumber();
+		String ran = jLib.getRanDomNumber(1000);
 		/*common Data*/
 		String url = fLib.getPropertyKeyValue("url");
 		String admin_UN = fLib.getPropertyKeyValue("admin_username");
@@ -116,9 +116,9 @@ public class TransactionTest extends BaseClass{
 
 		}
 	
-	@Test(groups="RegressionTest")
+	@Test(groups="RegressionTest", enabled = true, retryAnalyzer = com.TechMax.utility.RetryAnalyzerImp.class)
 	public void AddSupplierAddProductLoginAsEmployeeGenrateBillInPOSforProducttest() throws Throwable{
-		String ran = jLib.getRanDomNumber();
+		String ran = jLib.getRanDomNumber(1000);
 
 		// Fetching data from property files
 		String url = fLib.getPropertyKeyValue("url");
@@ -152,7 +152,7 @@ public class TransactionTest extends BaseClass{
 		s.getHomePage().getNavigateToSupplier().click();
 		s.getSupplierPage().getCreateSupplierAddIcon().click();
 		//8.Enter the details
-		String company = companyName+"_"+ran;
+		String company = companyName;
 		s.getSupplierPage().CreateSupplier(company, Province, City, PhoneNumber);
 		System.out.println("supplier is created");
 		
@@ -160,14 +160,14 @@ public class TransactionTest extends BaseClass{
 		s.getHomePage().getNavigateToProduct().click();
 		s.getProductPage().getCreateProductAddIcon().click();
 		String pcode = p_code + "_" + ran;
-		String pname = p_name + "_" + ran;
+		String pname = p_name ;
 		s.getProductPage().CreateProduct(pcode, pname, descrpition, quantity, on_hand, price, catagory, company);
 		System.out.println("Product is created");
 		
 		s.getProductPage().getSearchTextfield().sendKeys(pcode);
 		s.getProductPage().getElipseIcon().click();
 		s.getProductPage().getEditButton().click();
-		String upname = updatedProductName+"_"+ran;
+		String upname = updatedProductName;
 		s.getProductPage().EditProduct(upname, updatedDescription, updatedPrice, updatedCategory);
 		//details button need to click
 		s.getLoginPage().LogoutToApplication();

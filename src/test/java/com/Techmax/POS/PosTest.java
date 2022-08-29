@@ -1,11 +1,23 @@
 package com.Techmax.POS;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.TechMax.Pomrepositorylib.AccountsPage;
+import com.TechMax.Pomrepositorylib.EmployeePage;
+import com.TechMax.Pomrepositorylib.HomePage;
+import com.TechMax.Pomrepositorylib.LoginPage;
+import com.TechMax.Pomrepositorylib.CustomerPage;
+import com.TechMax.Pomrepositorylib.PosPage;
+import com.TechMax.Pomrepositorylib.ProductPage;
+import com.TechMax.Pomrepositorylib.SupplierPage;
 import com.TechMax.Pomrepositorylib.SingletonDesignPattern;
 import com.TechMax.utility.BaseClass;
 
@@ -13,9 +25,9 @@ import com.TechMax.utility.BaseClass;
 
 public class PosTest extends BaseClass {
 	
-	@Test(groups="SmokeTest",enabled=false)
+	@Test(groups="SmokeTest",enabled=true, retryAnalyzer = com.TechMax.utility.RetryAnalyzerImp.class)
 	public void Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test() throws Throwable{
-		String ran = jLib.getRanDomNumber();
+		String ran = jLib.getRanDomNumber(1000);
 		// Fetching data from excel
 		String product_code = eLib.getExcelData("Sheet1", 1, 2);
 		String product_name = eLib.getExcelData("Sheet1", 1, 3);
@@ -77,20 +89,20 @@ public class PosTest extends BaseClass {
 
 		}
 	
-	@Test(groups="RegressionTest",dataProvider="dataProvider_multipleData",enabled=true)
-	public void sale_a_product_check_the_transaction_details_test(String qty,String cust,String category,String productName ) throws Throwable{
-		// Fetching data from property file
+	@Test(groups="RegressionTest", retryAnalyzer = com.TechMax.utility.RetryAnalyzerImp.class,enabled = true)
+	public void sale_a_product_check_the_transaction_details_test() throws Throwable{
+		 //Fetching data from property file
 				String url = fLib.getPropertyKeyValue("url");
 				String admin_UN = fLib.getPropertyKeyValue("admin_username");
 				String admin_PW = fLib.getPropertyKeyValue("admin_password");
 				String user_UN = fLib.getPropertyKeyValue("user_username");
 				String user_PW = fLib.getPropertyKeyValue("user_password");
 
-//				// Fetching data from excel
-//				String qty = eLib.getExcelData("Sheet1", 4, 2);
-//				String cust = eLib.getExcelData("Sheet1", 4, 3);
-//				String category=eLib.getExcelData("Sheet1", 4, 4);
-//				String productName=eLib.getExcelData("Sheet1", 4, 5);
+			// Fetching data from excel
+				String qty = eLib.getExcelData("Sheet1", 4, 2);
+				String cust = eLib.getExcelData("Sheet1", 4, 3);
+				String category=eLib.getExcelData("Sheet1", 4, 4);
+				String productName=eLib.getExcelData("Sheet1", 4, 5);
 			
 				// logout admin
 				SingletonDesignPattern s=new SingletonDesignPattern(driver);		
@@ -132,22 +144,216 @@ public class PosTest extends BaseClass {
 				Assert.assertTrue(amount.contains(cash));
 
 	}
-	
-	@DataProvider
-	public Object[][] dataProvider_multipleData() throws Throwable{
-		Object[][] arr = new Object[5][4];
-		int r=4,c=2;
-		for(int i=0;i<5;i++){
-			for(int j=0;j<4;j++){
-				arr[i][j]=eLib.getExcelData("Sheet1", r, c);
-				c++;
-			}
-			c=2;
-			r++;
-		}
-		return arr;
-		
+	@Test(groups = "SmokeTest",enabled = true, retryAnalyzer = com.TechMax.utility.RetryAnalyzerImp.class)
+	public void Add_a_new_product_and_purchase_the_same_product_Test() throws Throwable {
+
+		//1.Read the test Data from Excel
+		String productcode = jLib.getRanDomNumber(1000000);
+		String productName=eLib.getExcelData("POS1", 3, 1);
+		String description =eLib.getExcelData("POS1", 3, 2);
+		String quantity  = eLib.getExcelData("POS1", 3, 3);
+		String onHand = eLib.getExcelData("POS1", 3, 4);
+		String price= eLib.getExcelData("POS1", 3, 5);
+		String selectCategory = eLib.getExcelData("POS1", 3, 6);
+		String selectSupplier = eLib.getExcelData("POS1", 3, 7);
+		String productcount = eLib.getExcelData("POS1", 3, 8);
+		String selectCustomer = eLib.getExcelData("POS1", 3, 9);
+	//	String DateStock = eLib.getExcelData("POS1", 3, 10);
+
+		//2.Create object for POM class
+		HomePage home=new HomePage(driver);
+		ProductPage product=new ProductPage(driver);
+		PosPage pos=new PosPage(driver);
+
+		//3.click on product major tab
+		driver.findElement(By.xpath("//i[@class='fas fa-fw fa-table']")).click();
+
+		//4.click on add icon in product page
+		driver.findElement(By.xpath("//i[@class='fas fa-fw fa-plus']")).click();
+
+		//5.Enter all the details	
+		product.CreateProduct(productcode, productName, description, quantity, onHand, price, selectCategory, selectSupplier);
+
+		//6.click on POS link
+		home.getNavigateToPOS().click();
+
+		//7.click on product category layout
+		pos.selectProductCategory(selectCategory);
+
+		//8.add the product count and Click on Add Button
+		pos.addTheproductCount(productName, productcount);
+
+		//9.Select customer 
+		pos.getSelectCustomerDropdown().sendKeys(selectCustomer);
+
+		//10.fetch total amount
+		String totalAmount = pos.getFetchTotalAmount().getAttribute("value");
+
+		//11.click on submit
+		pos.getSubmitButton().click();
+
+		//12.enter cash
+		pos.getEnterAmountTextField().sendKeys(totalAmount);
+
+		//13.click on proceed to payment
+		pos.getProceedToPaymentButton().click();
+		wLib.swithToAlertWindowAndAccpectValidate(driver, "Success");
+//		SoftAssert SA= new SoftAssert();
+//		SA.assertAll();
 	}
+
+	@Test(groups = "RegressionTest", enabled = true, retryAnalyzer = com.TechMax.utility.RetryAnalyzerImp.class)
+	public void AddSupplierAddProductGenrateBillInPOSforProductTest() throws Throwable {	
+		String companyName = eLib.getExcelData("Transaction", 3, 0);
+		String selectProvince = eLib.getExcelData("Transaction", 3, 1);
+		String selectCity = eLib.getExcelData("Transaction", 3, 2);
+		String suppContNumber = eLib.getExcelData("Transaction", 3, 3);
+
+		//Product Test Data
+		String productcode=jLib.getRanDomNumber(1000000);
+		String productName=eLib.getExcelData("Transaction", 3, 5);
+		String description = eLib.getExcelData("Transaction", 3, 6);
+		String quantity  = eLib.getExcelData("Transaction", 3, 7);
+		String onHand = eLib.getExcelData("Transaction", 3, 8);
+		String price= eLib.getExcelData("Transaction", 3, 9);
+		String selectCategory =eLib.getExcelData("Transaction", 3, 10);
+		String selectSupplier =eLib.getExcelData("Transaction", 3, 11);
+		//String DateStock = eLib.getExcelData("Transaction", 3, 12);
+
+		//Product Update test Data
+		String productPriceUpdate = eLib.getExcelData("Transaction", 3, 13);
+
+		//Quantity test data
+		String customerProdQuantity = eLib.getExcelData("Transaction", 3, 14);
+
+		//Customer Details Test Data
+		String firstname = eLib.getExcelData("Transaction", 3, 15);
+		String lastName = eLib.getExcelData("Transaction", 3, 16);
+		String custPhoneNumber = eLib.getExcelData("Transaction", 3, 17);
+
+		//Create object for POM class
+		HomePage home=new HomePage(driver);
+		SupplierPage supplier=new SupplierPage(driver);
+		ProductPage product=new ProductPage(driver);
+		PosPage pos=new PosPage(driver);
+
+		//6.Click on Supplier major tab
+		home.getNavigateToSupplier().click();
+
+		//7.Click on Add icon in supplier page
+		supplier.getCreateSupplierAddIcon().click();
+
+		//8.Enter the details and click on save button
+		supplier.CreateSupplier(companyName, selectProvince, selectCity, suppContNumber);
+
+		//6.click on product major tab
+		home.getNavigateToProduct().click();
+
+		//7.click on add icon in product page
+		product.getCreateProductAddIcon().click();
+
+		//8.Enter all the details	
+		product.CreateProduct(productcode, productName, description, quantity, onHand, price, selectCategory, selectSupplier );
+
+		//10.search for product
+		product.getSearchTextfield().sendKeys(productName);
+
+		//11.click on ellipsis icon
+		product.getProductEllipsis().click();
+
+		//12. click on edit button
+		product.getEditButton().click();
+
+		//13.update the product details
+		product.EditProduct(productName, description, productPriceUpdate, selectCategory);
+
+		//15.click on POS link
+		home.getNavigateToPOS().click();
+
+		//16.click on product category layout
+		pos.selectProductCategory(selectCategory);
+
+		//17.add the product count and Click on Add Button
+		pos.addTheproductCount(productName, customerProdQuantity);
+
+		//click on Add customer icon
+		pos.getAddCustomerIcon().click();
+
+		//Add New customer and click on save button
+		pos.addCustomer(firstname, lastName, custPhoneNumber);
+
+		//Select customer 
+		pos.getSelectCustomerDropdown().sendKeys(firstname);
+
+		//fetch total amount
+		String totalAmount = pos.getFetchTotalAmount().getAttribute("value");
+
+		//click on submit
+		pos.getSubmitButton().click();
+
+		//enter cash
+		pos.getEnterAmountTextField().sendKeys(totalAmount);
+
+		//click on proceed to payment
+		pos.getProceedToPaymentButton().click();
+		wLib.swithToAlertWindowAndAccpectValidate(driver, "Success");
+//		SoftAssert SA= new SoftAssert();
+//		SA.assertAll();
+	//	Assert.fail();
+	}
+	
+
+	@Test(groups = "SmokeTest", enabled=true, retryAnalyzer = com.TechMax.utility.RetryAnalyzerImp.class) 
+	public void Verify_data_flow_from_Customer_to_pos_Test() throws Throwable {
+
+		//2.Read the test Data
+		//2.Read the test Data
+		String FirstName = eLib.getExcelData("POS2", 3, 0);
+		String LastName = eLib.getExcelData("POS2", 3, 1);
+		String PhoneNumber = eLib.getExcelData("POS2", 3, 2);
+		String productcount = eLib.getExcelData("POS2", 3, 3);
+		String SelectCategory = eLib.getExcelData("POS2", 3, 4);
+		String productName = eLib.getExcelData("POS2", 3, 5);
+		String CustomerName=FirstName+" "+LastName;
+
+		HomePage home=new HomePage(driver);
+		LoginPage login=new LoginPage(driver);
+		SupplierPage supplier=new SupplierPage(driver);
+		ProductPage product=new ProductPage(driver);
+		PosPage pos=new PosPage(driver);
+		CustomerPage customer=new CustomerPage(driver);
+		//6. click on customer major tab
+		home.getNavigateToCustomer().click();
+
+		//7. click on add icon in customer page
+		customer.getcreateCustomerAddIcon().click();
+
+		//8.Enter the details
+		customer.createcustomer(FirstName, LastName, PhoneNumber);
+
+		//10.click on POS link
+		home.getNavigateToPOS().click();
+
+		//11.click on product category
+		pos.selectProductCategory(SelectCategory);
+
+		//12.add the product count and click on Add button
+		pos.addTheproductCount(productName, productcount);
+
+		// 13. get the elements from select customer dropdown
+		WebElement selectCustomerDrop = pos.getSelectCustomerDropdown();
+		List<WebElement> allCustomerWE = wLib.getOptions(selectCustomerDrop);
+		List<String> allCustomerList = new ArrayList<String>(); //Empty Container
+		for (WebElement eachCustomerWE : allCustomerWE) {
+			String eachCustomerName = eachCustomerWE.getText();
+			allCustomerList.add(eachCustomerName);
+		}
+
+		//16. validate customer in select customer dropdown
+		Assert.assertTrue(allCustomerList.contains(CustomerName));
+//		Assert.fail();
+		}
+
 
 
 }

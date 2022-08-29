@@ -9,7 +9,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import com.TechMax.Pomrepositorylib.SingletonDesignPattern;
+
+import com.TechMax.Pomrepositorylib.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
@@ -41,22 +42,22 @@ public class BaseClass {
 		System.out.println("invalid browser");
 	}
 	sdriver=driver;
+	driver.manage().window().maximize();
+	wLib.waitForElementInDOM(driver);	
 	}
+	
 	@BeforeMethod(groups={"SmokeTesting","RegressionTesting"})
 	public void configBM() throws Throwable {
-	/*common Data*/
-		String url = fLib.getPropertyKeyValue("url");
-		String admin_UN = fLib.getPropertyKeyValue("admin_username");
-		String admin_PW = fLib.getPropertyKeyValue("admin_password");
-	/* step 1 : login */
-	SingletonDesignPattern s=new SingletonDesignPattern(driver);		
-	s.getLoginPage().loginToApplication(url, admin_UN, admin_PW);
+	LoginPage login = new LoginPage(driver);
+	login.loginToApplicationAsAdmin();
+	System.out.println("Login");
 	}
+	
 	@AfterMethod(groups={"SmokeTesting","RegressionTesting"})
 	public void configAM() {
 	/*step 6 : logout*/
-	SingletonDesignPattern s=new SingletonDesignPattern(driver);		
-	s.getLoginPage().LogoutToApplication();
+		LoginPage login = new LoginPage(driver);
+		login.LogoutToApplication();
 	}
 	@AfterClass(groups={"SmokeTesting","RegressionTesting"})
 	public void configAC() {

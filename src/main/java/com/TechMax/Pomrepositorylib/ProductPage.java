@@ -51,6 +51,12 @@ public class ProductPage extends WebDriverUtility {
 	private WebElement updateCategory;
 	@FindBy(xpath = "//button[.='Update']")
 	private WebElement updateButton;
+	@FindBy(xpath="//a[@class='btn btn-primary bg-gradient-primary dropdown no-arrow']")
+	private WebElement productEllipsis;
+
+	public WebElement getProductEllipsis() {
+		return productEllipsis;
+	}
 
 	public WebElement getDateStockCalendar() {
 		return DateStockCalendar;

@@ -1,6 +1,7 @@
 package com.TechMax.utility;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -204,6 +205,43 @@ public class WebDriverUtility {
 	public void passEnterKey(WebDriver driver) {
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.ENTER).perform();
+	}
+	/**
+	 * used to Switch to Alert Window & click on OK button
+	 * @param driver
+	 */
+	public void swithToAlertWindowAndAccpectValidate(WebDriver driver ,String expectedMsg) {
+		Alert alt = driver.switchTo().alert();
+		if(!alt.getText().trim().equalsIgnoreCase(expectedMsg.trim())) {
+			System.out.println("Alert Message is not verified");
+		}
+		alt.accept();
+	}
+
+
+	/**
+	 * used to Switch to Alert Window & click on Cancel button
+	 * @param driver
+	 */
+	public void swithToAlertWindowAndCancelValidate(WebDriver driver, String expectedMsg) {
+		Alert alt = driver.switchTo().alert();
+		if(alt.getText().equals(expectedMsg)) {
+			System.out.println("Alert Message is verified");
+		}else {
+			System.out.println("Alert Message is not verified");
+		}
+		alt.dismiss();
+	}
+
+	public void deselectAll(WebElement element) {
+		Select sel = new Select(element);
+		sel.deselectAll();
+	}
+	
+	public List<WebElement> getOptions(WebElement element){
+		Select sel=new Select(element);
+		List<WebElement> options = sel.getOptions();
+		return options;
 	}
 
 }

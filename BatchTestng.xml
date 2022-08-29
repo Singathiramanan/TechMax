@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BatchSuite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.Techmax.POS.PosTest"/>
+      <class name="com.Techmax.Transaction.TransactionTest"/>
+      <class name="com.Techmax.Home.HomeTest"/>
+      <class name="com.Techmax.Inventory.InventoryTest"/>
+      <class name="com.Techmax.Accounts.AccountsTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- BatchSuite -->

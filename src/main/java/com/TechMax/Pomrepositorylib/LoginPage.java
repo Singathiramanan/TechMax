@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.TechMax.utility.FileUtility;
 import com.TechMax.utility.WebDriverUtility;
 
 public class LoginPage {
@@ -73,7 +74,20 @@ public class LoginPage {
 		loginButton.click();
 		wLib.swithToAlertWindowAndAccpect(driver);
 	}
-	
+	//Login to application as Admin
+		public void loginToApplicationAsAdmin() throws Throwable {
+			WebDriverUtility wLib = new WebDriverUtility();
+			FileUtility fLib  =new FileUtility();
+			String url=fLib.getPropertyKeyValue("url");
+			String un=fLib.getPropertyKeyValue("admin_username");
+			String pwd = fLib.getPropertyKeyValue("admin_password");
+			driver.get(url);
+			usernameTextfield.sendKeys(un);
+			passwordTextfield1.sendKeys(pwd);
+			loginButton.click();
+			wLib.swithToAlertWindowAndAccpectValidate(driver, "veen Welcome!");
+		}
+			
 	public void LogoutToApplication(){
 		profile_button.click();
 		Logout_button.click();

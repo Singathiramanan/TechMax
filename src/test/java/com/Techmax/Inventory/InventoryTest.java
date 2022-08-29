@@ -12,9 +12,9 @@ import com.TechMax.utility.BaseClass;
 
 public class InventoryTest extends BaseClass {
 	
-	@Test(groups="RegressionTest")
+	@Test(groups="RegressionTest", enabled = true, retryAnalyzer = com.TechMax.utility.RetryAnalyzerImp.class)
 	public void VerifySupplierNameInAddProduct_test() throws Throwable{
-		String ran = jLib.getRanDomNumber();
+		String ran = jLib.getRanDomNumber(1000);
 
 		// Fetching data from excel
 		String companyName = eLib.getExcelData("Sheet1", 17, 2);
@@ -36,7 +36,7 @@ public class InventoryTest extends BaseClass {
 		//Create a supplier
 		SupplierPage sp=new SupplierPage(driver);
 		sp.getCreateSupplierAddIcon().click();
-		String company = companyName+"_"+ran;
+		String company = companyName;
 		sp.CreateSupplier(company, Province, City, PhoneNumber);
 		System.out.println("supplier is created");
 		

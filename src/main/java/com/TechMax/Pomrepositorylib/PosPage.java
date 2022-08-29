@@ -30,6 +30,60 @@ public class PosPage {
 	private WebElement customerPhoneNumber;
 	@FindBy(xpath="//div[@id='poscustomerModal']/descendant::button[@type='submit']")
 	private WebElement customerSubmit;
+	
+	@FindBy(xpath="//button[@class='btn btn-primary btn-block']")
+	private WebElement proceedToPaymentButton;
+	@FindBy(xpath="//a[@class='btn btn-primary bg-gradient-primary']")
+	private WebElement AddCustomerIcon;
+	
+	public WebElement getProceedToPaymentButton() {
+		return proceedToPaymentButton;
+	}
+
+	public WebElement getAddCustomerIcon() {
+		return AddCustomerIcon;
+	}
+
+	public WebElement getCustomePhoneNumber() {
+		return customePhoneNumber;
+	}
+
+	public WebElement getSaveCustomerButton() {
+		return saveCustomerButton;
+	}
+
+	public WebElement getSelectCustomerDropdown() {
+		return selectCustomerDropdown;
+	}
+
+	public WebElement getFetchTotalAmount() {
+		return fetchTotalAmount;
+	}
+
+	public WebElement getSubmitButton() {
+		return submitButton;
+	}
+
+	public WebElement getEnterAmountTextField() {
+		return enterAmountTextField;
+	}
+
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	@FindBy(xpath="//div[@id='poscustomerModal']/descendant::h5[.='Add Customer']/parent::div/following-sibling::div[@class='modal-body']/descendant::input[@name='phonenumber']")
+	private WebElement customePhoneNumber;
+	@FindBy(xpath="//div[@id='poscustomerModal']/descendant::h5[.='Add Customer']/parent::div/following-sibling::div[@class='modal-body']/descendant::button[@class='btn btn-success']")
+	private WebElement saveCustomerButton;
+	@FindBy(name="customer")
+	private WebElement selectCustomerDropdown;
+	@FindBy(xpath="//input[@class='form-control text-right ' and @name='total']")
+	private WebElement fetchTotalAmount;
+	@FindBy(xpath="//button[@class='btn btn-block btn-success']")
+	private WebElement submitButton;
+	@FindBy(id="txtNumber")
+	private WebElement enterAmountTextField;
 
 	// Initialization
 	WebDriver driver;
@@ -98,11 +152,25 @@ public class PosPage {
 				.click();
 	}
 	public void addCustomer(String customerFN,String customerLN,String CustomerPN){
-		customerAddIcon.click();
+		//customerAddIcon.click();
 		customerFirstName.sendKeys(customerFN);
 		customerLastName.sendKeys(customerLN);
 		customerPhoneNumber.sendKeys(CustomerPN);
 		customerSubmit.click();
+	}
+
+	public void selectProductCategory(String selectCategory) {
+			driver.findElement(By.xpath("//a[.='"+selectCategory+"']")).click();
+		
+	}
+	
+	public void addTheproductCount(String productName,String customerProdQuantity) {
+		WebElement productCountEle = driver.findElement(By.
+	  xpath("//h6[@class='text-info' and text()='"+productName+"']/parent::div[@class='products']/child::input[@class='form-control']"));
+		productCountEle.clear();
+		productCountEle.sendKeys(customerProdQuantity);
+		WebElement POSAddElement = driver.findElement(By.xpath("//h6[@class='text-info' and text()='"+productName+"']/parent::div[@class='products']/child::input[@value='Add']"));
+		POSAddElement.click();
 	}
 
 }
