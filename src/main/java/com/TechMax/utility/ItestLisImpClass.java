@@ -13,18 +13,19 @@ import org.testng.ITestResult;
 public class ItestLisImpClass implements ITestListener {
 	
 	public void onTestFailure(ITestResult result){
-		String testCaseName = result.getMethod().getMethodName();
-		EventFiringWebDriver edriver=new EventFiringWebDriver(BaseClass.sdriver);
-		JavaUtility jLib=new JavaUtility();
-		String date_time = jLib.getSystemDate();
-		File src = edriver.getScreenshotAs(OutputType.FILE);
-		File dst=new File("./Screenshot/"+testCaseName+date_time+".png");
-		try {
-			FileHandler.copy(src, dst);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		String testCaseName = result.getMethod().getMethodName();
+//		EventFiringWebDriver edriver=new EventFiringWebDriver(BaseClass.sdriver);
+//		JavaUtility jLib=new JavaUtility();
+//		String date_time = jLib.getSystemDate();
+//		File src = edriver.getScreenshotAs(OutputType.FILE);
+//		File dst=new File("./Screenshot/"+testCaseName+date_time+".png");
+//		try {
+//			FileHandler.copy(src, dst);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
 	}
 
 	@Override
