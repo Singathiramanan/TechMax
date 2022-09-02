@@ -41,6 +41,7 @@ public class BaseClass {
 		System.out.println("invalid browser");
 	}
 	sdriver=driver;
+	
 	}
 	
 	@BeforeMethod(groups={"SmokeTesting","RegressionTesting"})

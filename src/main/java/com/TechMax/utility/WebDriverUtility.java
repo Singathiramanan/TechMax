@@ -1,15 +1,19 @@
 package com.TechMax.utility;
 
+import java.io.File;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,6 +26,27 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 
 public class WebDriverUtility {
+	
+	/**
+	 * This method to take a screen shot when test case is failure
+	 * @return 
+	 */
+	public static String takeScreenShot(){
+		
+		String screenShotPath = System.getProperty("./Screenshot/"+new JavaUtility().getSystemDateInIST()+".png");
+		EventFiringWebDriver eDriver= new EventFiringWebDriver(BaseClass.sdriver);
+		File src = eDriver.getScreenshotAs(OutputType.FILE);
+		try {
+			File dst = new File(screenShotPath);
+			FileUtils.copyFile(src, dst);	
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Unable to take ScreenShot");
+		}
+		return screenShotPath;
+		
+	}
 
 	/**
 	 * it's an implicitly wait Always wait for Element in DOM document & release
