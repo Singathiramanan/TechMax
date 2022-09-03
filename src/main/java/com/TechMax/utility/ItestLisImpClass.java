@@ -8,7 +8,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
@@ -18,9 +17,8 @@ public class ItestLisImpClass implements ITestListener {
 	public void onTestFailure(ITestResult result){
 		test.log(Status.FAIL, result.getMethod().getMethodName()+"is failed" );
 		test.log(Status.FAIL, result.getThrowable());
-		if(result.getStatus()==ITestResult.FAILURE) {
-		test.fail((Markup) MediaEntityBuilder.createScreenCaptureFromPath(WebDriverUtility.takeScreenShot()));
-		}
+		test.fail( "Test is failed",MediaEntityBuilder.createScreenCaptureFromPath(WebDriverUtility.takeScreenShot()).build());
+		
 	}
 
 	@Override
