@@ -56,7 +56,7 @@
 	</dependencies>
 	<profiles>
 		<profile>
-			<id>SmokeTest</id>
+			
 			<build>
 				<pluginManagement>
 					<plugins>
