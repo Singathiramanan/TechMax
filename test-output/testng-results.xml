@@ -1,24 +1,629 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results ignored="10" total="16" passed="0" failed="0" skipped="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="53" started-at="2022-09-03T13:48:01Z" finished-at="2022-09-03T13:48:01Z">
+  <suite started-at="2022-08-22T18:03:32 IST" name="Batch" finished-at="2022-08-22T18:03:34 IST" duration-ms="2166">
     <groups>
-      <group name="SmokeTest">
-        <method signature="EventFiringWebDriverScreenshot.Sample1()[pri:0, instance:com.Techmax.practice.EventFiringWebDriverScreenshot@3c0ecd4b]" name="Sample1" class="com.Techmax.practice.EventFiringWebDriverScreenshot"/>
-      </group> <!-- SmokeTest -->
+      <group name="smokeTesting">
+        <method signature="CreateEmployeeWithMandatoryFieldstestng.CreateEmployeeWithMandatoryFieldsTest()[pri:0, instance:com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng@46cdf8bd]" name="CreateEmployeeWithMandatoryFieldsTest" class="com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng"/>
+        <method signature="CreateNewSupplierVerifyTheSupplierCountInHomePagetestng.CreateNewSupplierVerifyTheSupplierCountInHomePageTest()[pri:0, instance:com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng@11392934]" name="CreateNewSupplierVerifyTheSupplierCountInHomePageTest" class="com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng"/>
+        <method signature="Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test()[pri:0, instance:com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng@6892b3b6]" name="Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test" class="com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng"/>
+        <method signature="Verify__Customer_Updation_and_Customer_details_testng.Verify__Customer_Updation_and_Customer_details_Test()[pri:0, instance:com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng@2a265ea9]" name="Verify__Customer_Updation_and_Customer_details_Test" class="com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng"/>
+      </group> <!-- smokeTesting -->
+      <group name="regressionTesting">
+        <method signature="CreateSuppliertestng.CreateSupplierTest()[pri:0, instance:com.TechMAX.supplier.CreateSuppliertestng@76a4ebf2]" name="CreateSupplierTest" class="com.TechMAX.supplier.CreateSuppliertestng"/>
+        <method signature="Create_product_in_product_page_testng.Create_product_in_product_page_Test()[pri:0, instance:com.TechMAX.product.Create_product_in_product_page_testng@6e6f2380]" name="Create_product_in_product_page_Test" class="com.TechMAX.product.Create_product_in_product_page_testng"/>
+      </group> <!-- regressionTesting -->
     </groups>
-    <test name="Test" duration-ms="53" started-at="2022-09-03T13:48:01Z" finished-at="2022-09-03T13:48:01Z">
-      <class name="com.Techmax.practice.EventFiringWebDriverScreenshot">
-        <test-method status="PASS" signature="Sample1()[pri:0, instance:com.Techmax.practice.EventFiringWebDriverScreenshot@3c0ecd4b]" name="Sample1" duration-ms="16" started-at="2022-09-03T13:48:01Z" finished-at="2022-09-03T13:48:01Z">
+    <test started-at="2022-08-22T18:03:32 IST" name="Test" finished-at="2022-08-22T18:03:34 IST" duration-ms="2166">
+      <class name="com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng@2a265ea9]" started-at="2022-08-22T18:03:34 IST" name="configBC" finished-at="2022-08-22T18:03:34 IST" duration-ms="72" status="FAIL">
+          <exception class="java.lang.AbstractMethodError">
+            <message>
+              <![CDATA[Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AbstractMethodError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Sample1 -->
-        <test-method status="PASS" signature="Sample2()[pri:0, instance:com.Techmax.practice.EventFiringWebDriverScreenshot@3c0ecd4b]" name="Sample2" duration-ms="0" started-at="2022-09-03T13:48:01Z" finished-at="2022-09-03T13:48:01Z">
+        </test-method> <!-- configBC -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng@2a265ea9]" started-at="2022-08-22T18:03:34 IST" name="configBM" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614117" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Sample2 -->
-      </class> <!-- com.Techmax.practice.EventFiringWebDriverScreenshot -->
+        </test-method> <!-- configBM -->
+        <test-method signature="Verify__Customer_Updation_and_Customer_details_Test()[pri:0, instance:com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng@2a265ea9]" started-at="2022-08-22T18:03:34 IST" name="Verify__Customer_Updation_and_Customer_details_Test" finished-at="2022-08-22T18:03:34 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.AbstractMethodError">
+            <message>
+              <![CDATA[Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AbstractMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify__Customer_Updation_and_Customer_details_Test -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng@2a265ea9]" started-at="2022-08-22T18:03:34 IST" name="configAM" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614141" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng@2a265ea9]" started-at="2022-08-22T18:03:34 IST" name="configAC" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614149" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+      </class> <!-- com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng -->
+      <class name="com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng@46cdf8bd]" started-at="2022-08-22T18:03:32 IST" name="configBS" finished-at="2022-08-22T18:03:32 IST" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBS -->
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng@46cdf8bd]" started-at="2022-08-22T18:03:32 IST" name="configBC" finished-at="2022-08-22T18:03:33 IST" duration-ms="1444" status="FAIL">
+          <exception class="java.lang.AbstractMethodError">
+            <message>
+              <![CDATA[Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AbstractMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBC -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng@46cdf8bd]" started-at="2022-08-22T18:03:33 IST" name="configBM" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171613996" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="CreateEmployeeWithMandatoryFieldsTest()[pri:0, instance:com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng@46cdf8bd]" started-at="2022-08-22T18:03:34 IST" name="CreateEmployeeWithMandatoryFieldsTest" finished-at="2022-08-22T18:03:34 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.AbstractMethodError">
+            <message>
+              <![CDATA[Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AbstractMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateEmployeeWithMandatoryFieldsTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng@46cdf8bd]" started-at="2022-08-22T18:03:34 IST" name="configAM" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614015" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng@46cdf8bd]" started-at="2022-08-22T18:03:34 IST" name="configAC" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614029" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng@46cdf8bd]" started-at="2022-08-22T18:03:34 IST" name="configAS" finished-at="2022-08-22T18:03:34 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAS -->
+      </class> <!-- com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng -->
+      <class name="com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng@11392934]" started-at="2022-08-22T18:03:34 IST" name="configBC" finished-at="2022-08-22T18:03:34 IST" duration-ms="71" status="FAIL">
+          <exception class="java.lang.AbstractMethodError">
+            <message>
+              <![CDATA[Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AbstractMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBC -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng@11392934]" started-at="2022-08-22T18:03:34 IST" name="configBM" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614235" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="CreateNewSupplierVerifyTheSupplierCountInHomePageTest()[pri:0, instance:com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng@11392934]" started-at="2022-08-22T18:03:34 IST" name="CreateNewSupplierVerifyTheSupplierCountInHomePageTest" finished-at="2022-08-22T18:03:34 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.AbstractMethodError">
+            <message>
+              <![CDATA[Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AbstractMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewSupplierVerifyTheSupplierCountInHomePageTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng@11392934]" started-at="2022-08-22T18:03:34 IST" name="configAM" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614267" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng@11392934]" started-at="2022-08-22T18:03:34 IST" name="configAC" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614270" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+      </class> <!-- com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng -->
+      <class name="com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng@6892b3b6]" started-at="2022-08-22T18:03:34 IST" name="configBC" finished-at="2022-08-22T18:03:34 IST" duration-ms="73" status="FAIL">
+          <exception class="java.lang.AbstractMethodError">
+            <message>
+              <![CDATA[Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AbstractMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBC -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng@6892b3b6]" started-at="2022-08-22T18:03:34 IST" name="configBM" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614356" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test()[pri:0, instance:com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng@6892b3b6]" started-at="2022-08-22T18:03:34 IST" name="Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test" finished-at="2022-08-22T18:03:34 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.AbstractMethodError">
+            <message>
+              <![CDATA[Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AbstractMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng@6892b3b6]" started-at="2022-08-22T18:03:34 IST" name="configAM" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614381" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng@6892b3b6]" started-at="2022-08-22T18:03:34 IST" name="configAC" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614383" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+      </class> <!-- com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng -->
+      <class name="com.TechMAX.supplier.CreateSuppliertestng">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.TechMAX.supplier.CreateSuppliertestng@76a4ebf2]" started-at="2022-08-22T18:03:34 IST" name="configBC" finished-at="2022-08-22T18:03:34 IST" duration-ms="66" status="FAIL">
+          <exception class="java.lang.AbstractMethodError">
+            <message>
+              <![CDATA[Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AbstractMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBC -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.TechMAX.supplier.CreateSuppliertestng@76a4ebf2]" started-at="2022-08-22T18:03:34 IST" name="configBM" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614586" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="CreateSupplierTest()[pri:0, instance:com.TechMAX.supplier.CreateSuppliertestng@76a4ebf2]" started-at="2022-08-22T18:03:34 IST" name="CreateSupplierTest" finished-at="2022-08-22T18:03:34 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.AbstractMethodError">
+            <message>
+              <![CDATA[Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AbstractMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateSupplierTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.TechMAX.supplier.CreateSuppliertestng@76a4ebf2]" started-at="2022-08-22T18:03:34 IST" name="configAM" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614602" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.TechMAX.supplier.CreateSuppliertestng@76a4ebf2]" started-at="2022-08-22T18:03:34 IST" name="configAC" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614609" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+      </class> <!-- com.TechMAX.supplier.CreateSuppliertestng -->
+      <class name="com.TechMAX.product.Create_product_in_product_page_testng">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.TechMAX.product.Create_product_in_product_page_testng@6e6f2380]" started-at="2022-08-22T18:03:34 IST" name="configBC" finished-at="2022-08-22T18:03:34 IST" duration-ms="84" status="FAIL">
+          <exception class="java.lang.AbstractMethodError">
+            <message>
+              <![CDATA[Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AbstractMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBC -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.TechMAX.product.Create_product_in_product_page_testng@6e6f2380]" started-at="2022-08-22T18:03:34 IST" name="configBM" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614482" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="Create_product_in_product_page_Test()[pri:0, instance:com.TechMAX.product.Create_product_in_product_page_testng@6e6f2380]" started-at="2022-08-22T18:03:34 IST" name="Create_product_in_product_page_Test" finished-at="2022-08-22T18:03:34 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.AbstractMethodError">
+            <message>
+              <![CDATA[Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method 'abstract java.util.List createArgs()' of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AbstractMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Create_product_in_product_page_Test -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.TechMAX.product.Create_product_in_product_page_testng@6e6f2380]" started-at="2022-08-22T18:03:34 IST" name="configAM" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614507" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.TechMAX.product.Create_product_in_product_page_testng@6e6f2380]" started-at="2022-08-22T18:03:34 IST" name="configAC" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1661171614512" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+      </class> <!-- com.TechMAX.product.Create_product_in_product_page_testng -->
     </test> <!-- Test -->
-  </suite> <!-- Suite -->
+  </suite> <!-- Batch -->
 </testng-results>

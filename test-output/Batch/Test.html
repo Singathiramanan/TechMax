@@ -1,0 +1,701 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/6</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Aug 22 18:03:32 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>2 seconds (2166 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng.configBC()'><b>configBC</b><br>Test class: com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng</td>
+<td><div><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1717739363", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1717739363'><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng@11392934</td></tr>
+<tr>
+<td title='com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng.configBC()'><b>configBC</b><br>Test class: com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng</td>
+<td><div><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1651754404", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1651754404'><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng@2a265ea9</td></tr>
+<tr>
+<td title='com.TechMAX.product.Create_product_in_product_page_testng.configBC()'><b>configBC</b><br>Test class: com.TechMAX.product.Create_product_in_product_page_testng</td>
+<td><div><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace217470033", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace217470033'><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.TechMAX.product.Create_product_in_product_page_testng@6e6f2380</td></tr>
+<tr>
+<td title='com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng.configBC()'><b>configBC</b><br>Test class: com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng</td>
+<td><div><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace771418758", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace771418758'><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng@46cdf8bd</td></tr>
+<tr>
+<td title='com.TechMAX.supplier.CreateSuppliertestng.configBC()'><b>configBC</b><br>Test class: com.TechMAX.supplier.CreateSuppliertestng</td>
+<td><div><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1720797452", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1720797452'><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.TechMAX.supplier.CreateSuppliertestng@76a4ebf2</td></tr>
+<tr>
+<td title='com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng.configBC()'><b>configBC</b><br>Test class: com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng</td>
+<td><div><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1873121466", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1873121466'><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng@6892b3b6</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.TechMAX.supplier.CreateSuppliertestng.configAM()'><b>configAM</b><br>Test class: com.TechMAX.supplier.CreateSuppliertestng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.supplier.CreateSuppliertestng@76a4ebf2</td></tr>
+<tr>
+<td title='com.TechMAX.product.Create_product_in_product_page_testng.configBM()'><b>configBM</b><br>Test class: com.TechMAX.product.Create_product_in_product_page_testng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.product.Create_product_in_product_page_testng@6e6f2380</td></tr>
+<tr>
+<td title='com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng.configAM()'><b>configAM</b><br>Test class: com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng@2a265ea9</td></tr>
+<tr>
+<td title='com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng.configAC()'><b>configAC</b><br>Test class: com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng@46cdf8bd</td></tr>
+<tr>
+<td title='com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng.configAC()'><b>configAC</b><br>Test class: com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng@6892b3b6</td></tr>
+<tr>
+<td title='com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng.configAC()'><b>configAC</b><br>Test class: com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng@2a265ea9</td></tr>
+<tr>
+<td title='com.TechMAX.product.Create_product_in_product_page_testng.configAC()'><b>configAC</b><br>Test class: com.TechMAX.product.Create_product_in_product_page_testng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.product.Create_product_in_product_page_testng@6e6f2380</td></tr>
+<tr>
+<td title='com.TechMAX.product.Create_product_in_product_page_testng.configAM()'><b>configAM</b><br>Test class: com.TechMAX.product.Create_product_in_product_page_testng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.product.Create_product_in_product_page_testng@6e6f2380</td></tr>
+<tr>
+<td title='com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng.configAM()'><b>configAM</b><br>Test class: com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng@46cdf8bd</td></tr>
+<tr>
+<td title='com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng.configBM()'><b>configBM</b><br>Test class: com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng@2a265ea9</td></tr>
+<tr>
+<td title='com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng.configAM()'><b>configAM</b><br>Test class: com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng@11392934</td></tr>
+<tr>
+<td title='com.TechMAX.supplier.CreateSuppliertestng.configAC()'><b>configAC</b><br>Test class: com.TechMAX.supplier.CreateSuppliertestng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.supplier.CreateSuppliertestng@76a4ebf2</td></tr>
+<tr>
+<td title='com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng.configBM()'><b>configBM</b><br>Test class: com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng@11392934</td></tr>
+<tr>
+<td title='com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng.configBM()'><b>configBM</b><br>Test class: com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng@6892b3b6</td></tr>
+<tr>
+<td title='com.TechMAX.supplier.CreateSuppliertestng.configBM()'><b>configBM</b><br>Test class: com.TechMAX.supplier.CreateSuppliertestng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.supplier.CreateSuppliertestng@76a4ebf2</td></tr>
+<tr>
+<td title='com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng.configBM()'><b>configBM</b><br>Test class: com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng</td>
+<td></td>
+<td>-1661171613</td>
+<td>com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng@46cdf8bd</td></tr>
+<tr>
+<td title='com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng.configAM()'><b>configAM</b><br>Test class: com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng@6892b3b6</td></tr>
+<tr>
+<td title='com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng.configAC()'><b>configAC</b><br>Test class: com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng</td>
+<td></td>
+<td>-1661171614</td>
+<td>com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng@11392934</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng.Verify__Customer_Updation_and_Customer_details_Test()'><b>Verify__Customer_Updation_and_Customer_details_Test</b><br>Test class: com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng</td>
+<td><div><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1230013344", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1230013344'><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng@2a265ea9</td></tr>
+<tr>
+<td title='com.TechMAX.supplier.CreateSuppliertestng.CreateSupplierTest()'><b>CreateSupplierTest</b><br>Test class: com.TechMAX.supplier.CreateSuppliertestng</td>
+<td><div><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2142893855", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2142893855'><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.TechMAX.supplier.CreateSuppliertestng@76a4ebf2</td></tr>
+<tr>
+<td title='com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng.CreateNewSupplierVerifyTheSupplierCountInHomePageTest()'><b>CreateNewSupplierVerifyTheSupplierCountInHomePageTest</b><br>Test class: com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng</td>
+<td><div><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1377301456", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1377301456'><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng@11392934</td></tr>
+<tr>
+<td title='com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng.CreateEmployeeWithMandatoryFieldsTest()'><b>CreateEmployeeWithMandatoryFieldsTest</b><br>Test class: com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng</td>
+<td><div><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace375097969", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace375097969'><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng@46cdf8bd</td></tr>
+<tr>
+<td title='com.TechMAX.product.Create_product_in_product_page_testng.Create_product_in_product_page_Test()'><b>Create_product_in_product_page_Test</b><br>Test class: com.TechMAX.product.Create_product_in_product_page_testng</td>
+<td><div><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1139609587", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1139609587'><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.TechMAX.product.Create_product_in_product_page_testng@6e6f2380</td></tr>
+<tr>
+<td title='com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test()'><b>Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test</b><br>Test class: com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng</td>
+<td><div><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1193841543", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1193841543'><pre>java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng@6892b3b6</td></tr>
+</table><p>
+</body>
+</html>

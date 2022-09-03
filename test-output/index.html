@@ -5,8 +5,9 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -23,22 +24,23 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+            <a href="#" panel-name="suite-Batch" class="navigator-link">
+              <span class="suite-name border-skipped">Batch</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>E:\Disk2\Eclipse\TechMax\sample.xml</span>
+                  <a href="#" panel-name="test-xml-Batch" class="navigator-link ">
+                    <span>E:\TY SELNIUM workspace\SDET38_TechMAX\batchExecution.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                  <a href="#" panel-name="testlist-Batch" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Suite">
-                    <span>1 group</span>
+                  <a href="#" panel-name="group-Batch" class="navigator-link ">
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                  <a href="#" panel-name="times-Batch" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                  <a href="#" panel-name="reporter-Batch" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                  <a href="#" panel-name="ignored-methods-Batch" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                  <a href="#" panel-name="chronological-Batch" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,26 +93,46 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">6 methods,  6 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Batch" class="hide-methods skipped suite-Batch"> (hide)</a> <!-- hide-methods skipped suite-Batch -->
+                      <a href="#" panel-name="suite-Batch" class="show-methods skipped suite-Batch"> (show)</a> <!-- show-methods skipped suite-Batch -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content skipped suite-Batch">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.Techmax.practice.EventFiringWebDriverScreenshot" hash-for-method="Sample1">Sample1</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Batch" title="com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng" class="method navigator-link" hash-for-method="CreateEmployeeWithMandatoryFieldsTest">CreateEmployeeWithMandatoryFieldsTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.Techmax.practice.EventFiringWebDriverScreenshot" hash-for-method="Sample2">Sample2</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Batch" title="com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng" class="method navigator-link" hash-for-method="CreateNewSupplierVerifyTheSupplierCountInHomePageTest">CreateNewSupplierVerifyTheSupplierCountInHomePageTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Batch" title="com.TechMAX.supplier.CreateSuppliertestng" class="method navigator-link" hash-for-method="CreateSupplierTest">CreateSupplierTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Batch" title="com.TechMAX.product.Create_product_in_product_page_testng" class="method navigator-link" hash-for-method="Create_product_in_product_page_Test">Create_product_in_product_page_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Batch" title="com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng" class="method navigator-link" hash-for-method="Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test">Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Batch" title="com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng" class="method navigator-link" hash-for-method="Verify__Customer_Updation_and_Customer_details_Test">Verify__Customer_Updation_and_Customer_details_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Batch -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -121,140 +143,497 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+        <div panel-name="suite-Batch" class="panel Batch">
+          <div class="suite-Batch-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.Techmax.practice.EventFiringWebDriverScreenshot</span>
+              <img src="skipped.png"/>
+              <span class="class-name">com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Sample1">
-                  </a> <!-- Sample1 -->
-                  <span class="method-name">Sample1</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Sample2">
-                  </a> <!-- Sample2 -->
-                  <span class="method-name">Sample2</span>
+                  <a name="Verify__Customer_Updation_and_Customer_details_Test">
+                  </a> <!-- Verify__Customer_Updation_and_Customer_details_Test -->
+                  <span class="method-name">Verify__Customer_Updation_and_Customer_details_Test</span>
+                  <div class="stack-trace">java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-        </div> <!-- panel Suite -->
-        <div panel-name="test-xml-Suite" class="panel">
+          </div> <!-- suite-Batch-class-skipped -->
+          <div class="suite-Batch-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateEmployeeWithMandatoryFieldsTest">
+                  </a> <!-- CreateEmployeeWithMandatoryFieldsTest -->
+                  <span class="method-name">CreateEmployeeWithMandatoryFieldsTest</span>
+                  <div class="stack-trace">java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Batch-class-skipped -->
+          <div class="suite-Batch-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test">
+                  </a> <!-- Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test -->
+                  <span class="method-name">Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test</span>
+                  <div class="stack-trace">java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Batch-class-skipped -->
+          <div class="suite-Batch-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.TechMAX.product.Create_product_in_product_page_testng</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Create_product_in_product_page_Test">
+                  </a> <!-- Create_product_in_product_page_Test -->
+                  <span class="method-name">Create_product_in_product_page_Test</span>
+                  <div class="stack-trace">java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Batch-class-skipped -->
+          <div class="suite-Batch-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.TechMAX.supplier.CreateSuppliertestng</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateSupplierTest">
+                  </a> <!-- CreateSupplierTest -->
+                  <span class="method-name">CreateSupplierTest</span>
+                  <div class="stack-trace">java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Batch-class-skipped -->
+          <div class="suite-Batch-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateNewSupplierVerifyTheSupplierCountInHomePageTest">
+                  </a> <!-- CreateNewSupplierVerifyTheSupplierCountInHomePageTest -->
+                  <span class="method-name">CreateNewSupplierVerifyTheSupplierCountInHomePageTest</span>
+                  <div class="stack-trace">java.lang.AbstractMethodError: Receiver class org.openqa.selenium.chrome.ChromeDriverService$Builder does not define or inherit an implementation of the resolved method &apos;abstract java.util.List createArgs()&apos; of abstract class org.openqa.selenium.remote.service.DriverService$Builder.
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:441)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.sales.techmax.genericUtility.BaseClass.configBC(BaseClass.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Batch-class-skipped -->
+        </div> <!-- panel Batch -->
+        <div panel-name="test-xml-Batch" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">E:\Disk2\Eclipse\TechMax\sample.xml</span>
+            <span class="header-content">E:\TY SELNIUM workspace\SDET38_TechMAX\batchExecution.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Batch&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.Techmax.practice.EventFiringWebDriverScreenshot&quot;/&gt;
+      &lt;class name=&quot;com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng&quot;/&gt;
+      &lt;class name=&quot;com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng&quot;/&gt;
+      &lt;class name=&quot;com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng&quot;/&gt;
+      &lt;class name=&quot;com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng&quot;/&gt;
+      &lt;class name=&quot;com.TechMAX.product.Create_product_in_product_page_testng&quot;/&gt;
+      &lt;class name=&quot;com.TechMAX.supplier.CreateSuppliertestng&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
-&lt;/suite&gt; &lt;!-- Suite --&gt;
+&lt;/suite&gt; &lt;!-- Batch --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Suite" class="panel">
+        <div panel-name="testlist-Batch" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Suite</span>
+            <span class="header-content">Tests for Batch</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (6 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Suite" class="panel">
+        <div panel-name="group-Batch" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Suite</span>
+            <span class="header-content">Groups for Batch</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">SmokeTest</span>
+              <span class="test-group-name">regressionTesting</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">Sample1</span>
+                <span class="method-in-group-name">CreateSupplierTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">Create_product_in_product_page_Test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">smokeTesting</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">CreateEmployeeWithMandatoryFieldsTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">CreateNewSupplierVerifyTheSupplierCountInHomePageTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">Verify__Customer_Updation_and_Customer_details_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Suite" class="panel">
+        <div panel-name="times-Batch" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Suite</span>
+            <span class="header-content">Times for Batch</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Suite');
-function tableData_Suite() {
+suiteTableInitFunctions.push('tableData_Batch');
+function tableData_Batch() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Sample1')
-data.setCell(0, 2, 'com.Techmax.practice.EventFiringWebDriverScreenshot')
-data.setCell(0, 3, 16);
+data.setCell(0, 1, 'Verify__Customer_Updation_and_Customer_details_Test')
+data.setCell(0, 2, 'com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng')
+data.setCell(0, 3, 0);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Sample2')
-data.setCell(1, 2, 'com.Techmax.practice.EventFiringWebDriverScreenshot')
+data.setCell(1, 1, 'CreateSupplierTest')
+data.setCell(1, 2, 'com.TechMAX.supplier.CreateSuppliertestng')
 data.setCell(1, 3, 0);
-window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'CreateNewSupplierVerifyTheSupplierCountInHomePageTest')
+data.setCell(2, 2, 'com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng')
+data.setCell(2, 3, 0);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'CreateEmployeeWithMandatoryFieldsTest')
+data.setCell(3, 2, 'com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng')
+data.setCell(3, 3, 0);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'Create_product_in_product_page_Test')
+data.setCell(4, 2, 'com.TechMAX.product.Create_product_in_product_page_testng')
+data.setCell(4, 3, 0);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test')
+data.setCell(5, 2, 'com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng')
+data.setCell(5, 3, 0);
+window.suiteTableData['Batch']= { tableData: data, tableDiv: 'times-div-Batch'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 ms</span>
-              <div id="times-div-Suite">
-              </div> <!-- times-div-Suite -->
+              <span class="suite-total-time">Total running time: 0 ms</span>
+              <div id="times-div-Batch">
+              </div> <!-- times-div-Batch -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Suite" class="panel">
+        <div panel-name="reporter-Batch" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Suite</span>
+            <span class="header-content">Reporter output for Batch</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Suite" class="panel">
+        <div panel-name="ignored-methods-Batch" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">10 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">configBS</span>
+                <br/>
+                <span class="ignored-method-name">configAS</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">configBS</span>
+                <br/>
+                <span class="ignored-method-name">configAS</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.TechMAX.product.Create_product_in_product_page_testng</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">configBS</span>
+                <br/>
+                <span class="ignored-method-name">configAS</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.TechMAX.supplier.CreateSuppliertestng</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">configBS</span>
+                <br/>
+                <span class="ignored-method-name">configAS</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">configBS</span>
+                <br/>
+                <span class="ignored-method-name">configAS</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Suite" class="panel">
+        <div panel-name="chronological-Batch" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.Techmax.practice.EventFiringWebDriverScreenshot</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">Sample1</span>
+              <div class="chronological-class-name">com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">configBS</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">configBC</span>
+                <span class="method-start">54 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">1567 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Sample2</span>
-                <span class="method-start">31 ms</span>
+                <span class="method-name">CreateEmployeeWithMandatoryFieldsTest</span>
+                <span class="method-start">1574 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">1586 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">configAC</span>
+                <span class="method-start">1600 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">configBC</span>
+                <span class="method-start">1610 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">1688 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Verify__Customer_Updation_and_Customer_details_Test</span>
+                <span class="method-start">1693 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">1712 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">configAC</span>
+                <span class="method-start">1720 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">configBC</span>
+                <span class="method-start">1725 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">1806 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateNewSupplierVerifyTheSupplierCountInHomePageTest</span>
+                <span class="method-start">1819 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">1838 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">configAC</span>
+                <span class="method-start">1841 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">configBC</span>
+                <span class="method-start">1844 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">1927 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test</span>
+                <span class="method-start">1937 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">1952 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">configAC</span>
+                <span class="method-start">1954 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.TechMAX.product.Create_product_in_product_page_testng</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">configBC</span>
+                <span class="method-start">1958 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">2053 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Create_product_in_product_page_Test</span>
+                <span class="method-start">2068 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">2078 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">configAC</span>
+                <span class="method-start">2083 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.TechMAX.supplier.CreateSuppliertestng</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">configBC</span>
+                <span class="method-start">2086 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">2157 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateSupplierTest</span>
+                <span class="method-start">2159 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">2173 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">configAC</span>
+                <span class="method-start">2180 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">configAS</span>
+                <span class="method-start">2363 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

@@ -1,36 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Smoke]">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [smoke]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <parameter name="Browser" value="chrome"/>
     <groups>
       <run>
-        <include name="SmokeTesting"/>
+        <include name="smokeTesting"/>
       </run>
     </groups>
     <classes>
-      <class name="com.Techmax.POS.Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details">
+      <class name="com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng">
         <methods>
-          <include name="configBM"/>
-          <include name="configAM"/>
-          <include name="Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details_test"/>
           <include name="configBS"/>
           <include name="configBC"/>
-          <include name="configAS"/>
-          <include name="configAC"/>
-        </methods>
-      </class> <!-- com.Techmax.POS.Purchase_a_product_and_Add_Updated_customer_and_verify_transaction_details -->
-      <class name="com.Techmax.Transaction.AddProductLoginAsEmployeeGenrateBillInPOSforProduct">
-        <methods>
           <include name="configBM"/>
-          <include name="AddProductLoginAsEmployeeGenrateBillInPOSforProductTest"/>
-          <include name="configAM"/>
-          <include name="configBS"/>
-          <include name="configBC"/>
+          <include name="Purchase_a_product_and_add_new_customer_and_verify_transaction_details_Test"/>
           <include name="configAS"/>
           <include name="configAC"/>
+          <include name="configAM"/>
         </methods>
-      </class> <!-- com.Techmax.Transaction.AddProductLoginAsEmployeeGenrateBillInPOSforProduct -->
+      </class> <!-- com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng -->
     </classes>
   </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Smoke] -->
+</suite> <!-- Failed suite [smoke] -->
