@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="smoke">
-<groups>
-<run>
-<include name="smokeTesting"></include>
-</run>
-</groups>
-  <test thread-count="5" name="Test">
-     <parameter name="Browser" value="chrome"></parameter>
-    <classes>
-      <class name="com.TechMAX.employee.CreateEmployeeWithMandatoryFieldstestng"/>
-      <class name="com.TechMAX.customer.Verify__Customer_Updation_and_Customer_details_testng"/>
-      <class name="com.TechMAX.home.CreateNewSupplierVerifyTheSupplierCountInHomePagetestng"/>
-      <class name="com.TechMAX.pos.Purchase_a_product_and_add_new_customer_and_verify_transaction_details_testng"/>
-      <class name="com.TechMAX.product.Create_product_in_product_page_testng"/>
-      <class name="com.TechMAX.supplier.CreateSuppliertestng"/>
-    </classes>
-  </test> <!-- Test -->
+	<groups>
+		<run>
+			<include name="smokeTesting"></include>
+		</run>
+	</groups>
+	<test thread-count="5" name="Test">
+		<parameter name="Browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.Techmax.Inventory.InventoryTest" />
+			<class name="com.Techmax.Transaction.TransactionTest" />
+			<class name="com.Techmax.POS.PosTest" />
+			<class name="com.Techmax.Home.HomeTest" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- smoke -->
