@@ -29,12 +29,14 @@ public class WebDriverUtility {
 	
 	/**
 	 * This method to take a screen shot when test case is failure
+	 * @param string 
+	 * @param sdriver 
 	 * @return 
 	 */
-	public static String takeScreenShot(){
+	public static String takeScreenShot(WebDriver sdriver, String string){
 		
-		String screenShotPath = System.getProperty("./Screenshot/"+new JavaUtility().getSystemDateInIST()+".png");
-		EventFiringWebDriver eDriver= new EventFiringWebDriver(BaseClass.sdriver);
+		String screenShotPath = System.getProperty("./Screenshot/"+string+new JavaUtility().getSystemDateInIST()+".png");
+		EventFiringWebDriver eDriver= new EventFiringWebDriver(sdriver);
 		File src = eDriver.getScreenshotAs(OutputType.FILE);
 		try {
 			File dst = new File(screenShotPath);
