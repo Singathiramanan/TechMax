@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class rtyui {
+public class AutomationTestingPage {
 
 	public static void main(String[] args) throws InterruptedException {
 		
@@ -44,6 +44,7 @@ public class rtyui {
 			driver.findElement(By.xpath("//input[@id='firstpassword']")).sendKeys("Siv@2904");
 			driver.findElement(By.xpath("//input[@id='secondpassword']")).sendKeys("Siv@2904");
 			driver.findElement(By.xpath("//button[@id='submitbtn']")).click();
+			
 			
 	
 	}

@@ -41,6 +41,10 @@ public class FetcgAllProductsAmount {
 		}
 		//SortPrice
 		Collections.sort(plist);
+		for(String amt:plist){
+			System.out.println(amt);
+		}
+		Collections.reverse(plist);
 		
 		for(String amt:plist){
 			System.out.println(amt);

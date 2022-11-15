@@ -83,12 +83,12 @@ public class WebDriverUtility {
 		WebDriverWait wait = new WebDriverWait(driver, IConstants.Explicitly_TINEOUT);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-
+	
 	/**
 	 * used to Switch to Any Window based on Window Title
 	 * 
 	 * @param driver
-	 * @param partialWindowTitle
+	 * @param partialWindowTitle0
 	 */
 	public void swithToWindow(WebDriver driver, String partialWindowTitle) {
 		Set<String> set = driver.getWindowHandles();
