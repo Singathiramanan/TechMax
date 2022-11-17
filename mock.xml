@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" name="MockSuite">
+  <test thread-count="4" name="MockTest">
+    <classes>
+      <class name="MockInterview.CricbuzzScoresAndWickets"/>
+      <class name="MockInterview.AmazonAllPhone"/>
+      <class name="MockInterview.ShadowElementInspect"/>
+      <class name="MockInterview.pepperFry"/>
+      <class name="MockInterview.Arcesium"/>
+      <class name="MockInterview.AmazonBookSearch"/>
+    </classes>
+  </test> <!-- MockTest -->
+</suite> <!-- MockSuite -->
