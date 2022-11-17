@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="1" ignored="1" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24619" started-at="2022-11-15T05:38:17Z" finished-at="2022-11-15T05:38:42Z">
+  <suite name="Default suite" duration-ms="128603" started-at="2022-11-16T10:51:31Z" finished-at="2022-11-16T10:53:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24619" started-at="2022-11-15T05:38:17Z" finished-at="2022-11-15T05:38:42Z">
+    <test name="Default test" duration-ms="128603" started-at="2022-11-16T10:51:31Z" finished-at="2022-11-16T10:53:40Z">
       <class name="MockInterview.AmazonAllPhone">
-        <test-method status="FAIL" signature="FetchAllPhone()[pri:0, instance:MockInterview.AmazonAllPhone@7085bdee]" name="FetchAllPhone" duration-ms="24570" started-at="2022-11-15T05:38:17Z" finished-at="2022-11-15T05:38:42Z">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+        <test-method status="FAIL" signature="FlipkartBook()[pri:0, instance:MockInterview.AmazonAllPhone@7085bdee]" name="FlipkartBook" duration-ms="128550" started-at="2022-11-16T10:51:31Z" finished-at="2022-11-16T10:53:40Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='0-departcity']"}
   (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-EM3OVKO', ip: '192.168.190.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Umamani\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55103}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1ea0257da76ed015d68b1a08af2a7248
-*** Element info: {Using=xpath, value=//a[@aria-label='Go to page 5']}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Umamani\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55555}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: cb94b104470dde5c25691562f75ded49
+*** Element info: {Using=xpath, value=//input[@name='0-departcity']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='0-departcity']"}
   (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-EM3OVKO', ip: '192.168.190.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Umamani\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55103}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1ea0257da76ed015d68b1a08af2a7248
-*** Element info: {Using=xpath, value=//a[@aria-label='Go to page 5']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Umamani\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55555}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: cb94b104470dde5c25691562f75ded49
+*** Element info: {Using=xpath, value=//input[@name='0-departcity']}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -44,7 +44,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at MockInterview.AmazonAllPhone.FetchAllPhone(AmazonAllPhone.java:25)
+at MockInterview.AmazonAllPhone.FlipkartBook(AmazonAllPhone.java:56)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -72,11 +72,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- FetchAllPhone -->
-        <test-method status="PASS" signature="FlipkartBook()[pri:0, instance:MockInterview.AmazonAllPhone@7085bdee]" name="FlipkartBook" duration-ms="2" started-at="2022-11-15T05:38:42Z" finished-at="2022-11-15T05:38:42Z">
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FlipkartBook -->

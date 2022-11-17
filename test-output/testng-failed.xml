@@ -5,7 +5,7 @@
     <classes>
       <class name="MockInterview.AmazonAllPhone">
         <methods>
-          <include name="FetchAllPhone"/>
+          <include name="FlipkartBook"/>
         </methods>
       </class> <!-- MockInterview.AmazonAllPhone -->
     </classes>

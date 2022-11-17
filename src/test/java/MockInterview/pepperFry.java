@@ -3,6 +3,8 @@ package MockInterview;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,7 +22,7 @@ public class pepperFry {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get("https://pepperfry.com/");
 		String catagory="Decor";
-		driver.findElement(By.xpath("//div[@id='regPopUp']/a[@class='popup-close']")).click();
+		//driver.findElement(By.xpath("//div[@id='regPopUp']/a[@class='popup-close']")).click();
 		WebElement ele = driver.findElement(By.xpath("//div[@id='menu_wrapper']/descendant::a[contains(.,'"+catagory+"')]"));
 		Actions act=new Actions(driver);
 		act.moveToElement(ele);
@@ -35,9 +37,13 @@ public class pepperFry {
 		act.moveToElement(ele3).click().build().perform();
 		driver.findElement(By.xpath("//label[@for='brandsnameSpace_Of_Joy']")).click();
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//label[contains(.,'White')]")).click();
-		driver.quit();
-		
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeAsyncScript("window.scrollTo(0,200)", "");
+		WebElement ele4 = driver.findElement(By.xpath("//h2[contains(.,'Colour')]/ancestor::div[@class='clip__filter-warpper']/descendant::label[contains(.,'White')]"));
+		Rectangle axis = ele4.getRect();
+		int x = axis.getX();
+		int y = axis.getY();
+		act.moveByOffset(x, y).click().perform();		
 	}
 	
 
