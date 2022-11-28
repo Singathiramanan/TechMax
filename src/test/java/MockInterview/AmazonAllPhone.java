@@ -14,7 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AmazonAllPhone {
 
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void FetchAllPhone() throws InterruptedException{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
@@ -24,9 +24,11 @@ public class AmazonAllPhone {
 		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("Nokia 105",Keys.ENTER);
 		String page = driver.findElement(By.xpath("//a[@aria-label='Go to page 5']")).getText();
 		int no = Integer.parseInt(page);
+//		JavascriptExecutor js=(JavascriptExecutor)driver;
 		int count=0;
 		while(no>=1){
 			Thread.sleep(15000);
+//			js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
 			List<WebElement> names = driver.findElements(By.xpath("//div[@class='s-main-slot s-result-list s-search-results sg-row']/descendant::span[@class='a-size-medium a-color-base a-text-normal']"));
 			System.out.println(names.size());
 			for(WebElement ele:names){
