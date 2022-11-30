@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33988" started-at="2022-11-23T11:57:42Z" finished-at="2022-11-23T11:58:16Z">
+  <suite name="Default suite" duration-ms="35689" started-at="2022-11-30T12:47:56Z" finished-at="2022-11-30T12:48:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33988" started-at="2022-11-23T11:57:42Z" finished-at="2022-11-23T11:58:16Z">
-      <class name="MockInterview.AmazonAllPhone">
-        <test-method status="PASS" signature="FetchAllPhone()[pri:0, instance:MockInterview.AmazonAllPhone@7085bdee]" name="FetchAllPhone" duration-ms="33935" started-at="2022-11-23T11:57:42Z" finished-at="2022-11-23T11:58:15Z">
+    <test name="Default test" duration-ms="35689" started-at="2022-11-30T12:47:56Z" finished-at="2022-11-30T12:48:32Z">
+      <class name="MockInterview.MakeMyTrip">
+        <test-method status="PASS" signature="MakeMyTrip()[pri:0, instance:MockInterview.MakeMyTrip@7085bdee]" name="MakeMyTrip" duration-ms="35646" started-at="2022-11-30T12:47:56Z" finished-at="2022-11-30T12:48:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FetchAllPhone -->
-      </class> <!-- MockInterview.AmazonAllPhone -->
+        </test-method> <!-- MakeMyTrip -->
+      </class> <!-- MockInterview.MakeMyTrip -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

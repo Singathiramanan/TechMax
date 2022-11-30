@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MockInterview.AmazonAllPhone">
+      <class name="MockInterview.MakeMyTrip">
         <methods>
-          <include name="FlipkartBook"/>
+          <include name="MakeMyTrip"/>
         </methods>
-      </class> <!-- MockInterview.AmazonAllPhone -->
+      </class> <!-- MockInterview.MakeMyTrip -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

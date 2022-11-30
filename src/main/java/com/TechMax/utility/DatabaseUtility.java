@@ -51,7 +51,7 @@ public class DatabaseUtility {
 	}
 	
 	/**
-	 * This method will execute the querry
+	 * This method will execute the query
 	 * @param query
 	 * @return
 	 * @throws Throwable
@@ -64,7 +64,7 @@ public class DatabaseUtility {
 
 	}
 	/**
-	 * This method will execute querry based on querry and it will verify the data. 
+	 * This method will execute query based on query and it will verify the data. 
 	 * @param querry
 	 * @param columnName
 	 * @param expectedData
