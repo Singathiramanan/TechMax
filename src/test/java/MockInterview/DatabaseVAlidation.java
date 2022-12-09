@@ -30,7 +30,7 @@ public class DatabaseVAlidation {
 			ResultSet names = connection.createStatement().executeQuery(data);
 			boolean flag = false;
 			while(names.next()){
-				System.out.println(names.getString(1));
+//				System.out.println(names.getString(1));
 				if(names.getString(1).equalsIgnoreCase(name)){
 					System.out.println("Name already Present");
 					flag=true;

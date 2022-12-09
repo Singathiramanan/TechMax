@@ -65,12 +65,12 @@ public class ExcelUtility {
 				FileInputStream fis  = new FileInputStream(IConstants.EXCELPATH);
 				Workbook wb = WorkbookFactory.create(fis);
 				Sheet sh = wb.getSheet(sheetName);
-				Row row = sh.getRow(rowNum);
+				Row row = sh.createRow(rowNum);
 				Cell cel = row.createCell(celNum);
 				cel.setCellValue(data);
 				FileOutputStream fos = new FileOutputStream(IConstants.EXCELPATH);
 				wb.write(fos);
-				wb.close();
+//				wb.close();
 				
 			}
 
