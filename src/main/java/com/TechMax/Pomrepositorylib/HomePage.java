@@ -6,7 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
-	//Declaration	
+	/*
+	 * Author - Venkat
+	 * Declaration
+	 * 
+	 */	
 	@FindBy(xpath="//span[.='Home']")
 	private WebElement navigateToHome;
 	@FindBy(xpath="//span[text()='Customer']")
