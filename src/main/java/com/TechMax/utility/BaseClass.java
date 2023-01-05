@@ -21,11 +21,11 @@ public class BaseClass {
 	public FileUtility fLib = new FileUtility();
 	public ExcelUtility eLib = new ExcelUtility();
 	
-	
 	@BeforeSuite(groups={"SmokeTesting","RegressionTesting"})
 	public void configBS() {
 	System.out.println("========================connect to DB========================");
 	}
+	
 	//@Parameters("Browser")
 	@BeforeClass(groups={"SmokeTesting","RegressionTesting"})
 	public void configBC() throws Throwable {
@@ -41,7 +41,6 @@ public class BaseClass {
 		System.out.println("invalid browser");
 	}
 	sdriver=driver;
-	
 	}
 	
 	@BeforeMethod(groups={"SmokeTesting","RegressionTesting"})
