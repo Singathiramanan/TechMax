@@ -44,6 +44,12 @@ public class CricbuzzScoresAndWickets {
 			map2.put(bowler.get(i).getText(), wickets.get(i).getText());
 
 		}
+		int max=0;
+		for(Entry<String, String> Wmax:map2.entrySet()){
+			if(max<Integer.parseInt(Wmax.getValue())){
+				max=Integer.parseInt(Wmax.getValue());
+			}
+		}
 		
 		System.out.println();
 		System.out.println("--Batters--");
@@ -56,6 +62,14 @@ public class CricbuzzScoresAndWickets {
 		System.out.println();
 		for (Entry<String, String> sc2 : map2.entrySet()) {
 			System.out.println(sc2.getKey() + "--->" + sc2.getValue());
+		}
+		System.out.println();
+		System.out.println("Maxi Wicket Taken Bowler");
+		System.out.println();
+		for(Entry<String, String> maxWic:map2.entrySet()){
+			if(max==Integer.parseInt(maxWic.getValue())){
+				System.out.println(maxWic.getKey()+"--->"+maxWic.getValue());
+			}
 		}
 		//driver.close();
 		driver.navigate().to("https://www.cricbuzz.com/");

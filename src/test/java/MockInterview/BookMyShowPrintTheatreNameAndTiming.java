@@ -26,6 +26,7 @@ public class BookMyShowPrintTheatreNameAndTiming {
 	public void FetchTheatreAndTime() throws EncryptedDocumentException, FileNotFoundException, IOException, InterruptedException{
 		@SuppressWarnings("resource")
 		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the movie name");
 		String movieName=sc.nextLine();
 		Thread.sleep(5000);
 		WebDriverManager.chromedriver().setup();
@@ -36,7 +37,7 @@ public class BookMyShowPrintTheatreNameAndTiming {
 		driver.findElement(By.xpath("//span[.='Search for Movies, Events, Plays, Sports and Activities']")).click();
 		driver.findElement(By.xpath("//input[@placeholder='Search for Movies, Events, Plays, Sports and Activities']")).sendKeys(movieName);
 		driver.findElement(By.xpath("//ul[@class='sc-sPYgB gVUFKz']/descendant::span[.='"+movieName+"']")).click();
-		driver.findElement(By.xpath("//h1[contains(.,'Gold')]/following-sibling::div[@class='styles__CtaWrapper-sc-qswwm9-8 JInhj']/descendant::span")).click();
+		driver.findElement(By.xpath("//h1[contains(.,'"+movieName+"')]/following-sibling::div[@class='styles__CtaWrapper-sc-qswwm9-8 JInhj']/descendant::span")).click();
 		try{
 		driver.findElement(By.xpath("//div[@class='sc-1k6uqqy-0 gZyDCA']/descendant::span[contains(.,'IMAX')]")).click();;
 		Thread.sleep(5000);
