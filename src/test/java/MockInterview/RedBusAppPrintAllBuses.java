@@ -8,6 +8,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.TechMax.utility.JavaUtility;
@@ -19,6 +21,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+@Listeners(com.TechMax.utility.ItestLisImpClass.class)
 public class RedBusAppPrintAllBuses {
 	@Test
 	public void PrintAllBusestest(){
@@ -57,12 +60,13 @@ public class RedBusAppPrintAllBuses {
 			System.out.println(i+")"+BusName);
 			i++;
 		}
-		if(total==count){
+		if(count==total){
 			System.out.println("Bus count is matching");
 		}else{
-			System.out.println("Bus count is mismatching");
+			Assert.fail();
 		}
-		ExtentSparkReporter spark=new ExtentSparkReporter("E:\\Disk2\\Eclipse\\TechMax\\ExtentReports/"+new JavaUtility().getSystemDateInIST()+".html");
+		
+		/*ExtentSparkReporter spark=new ExtentSparkReporter("E:\\Disk2\\Eclipse\\TechMax\\ExtentReports/"+new JavaUtility().getSystemDateInIST()+".html");
 		spark.config().setDocumentTitle("RedbusApplicationBusesFound");
 		spark.config().setReportName("venkat");
 		spark.config().setTheme(Theme.DARK);
@@ -72,8 +76,16 @@ public class RedBusAppPrintAllBuses {
 		reports.setSystemInfo("Reporter", "venkat");
 		reports.setSystemInfo("Browser", "chrome");
 		ExtentTest test = reports.createTest("Redbus");
-		test.log(Status.PASS, "Testcase is passed");
-		reports.flush();
+		if(total==count){
+			test.log(Status.PASS, "Testcase is passed");
+			test.pass("Bus count is matching");
+			reports.flush();
+		}else{
+			System.out.println();
+			test.log(Status.FAIL, "Testcase is failed");
+			test.fail("Bus count is mismatching");
+			reports.flush();
+		}*/
 		driver.quit();
 	}
 }
