@@ -9,15 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import com.TechMax.utility.JavaUtility;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -27,8 +21,12 @@ public class RedBusAppPrintAllBuses {
 	public void PrintAllBusestest(){
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
+		
+		Reporter.log("Lanching the browser",true);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		Reporter.log("maximizzing the browser",true);
 		driver.manage().window().maximize();
+		Reporter.log("lanching the URL",true);
 		driver.get("https://www.redbus.in/");
 		driver.findElement(By.xpath("//input[@id='src']")).sendKeys("Bangalore");
 		driver.findElement(By.xpath("//ul[@class='autoFill homeSearch']/descendant::li[.='Bangalore']")).click();
@@ -38,13 +36,15 @@ public class RedBusAppPrintAllBuses {
 		
 		driver.findElement(By.xpath("//input[@id='onward_cal']")).click();
 		
-		int date=13;
+		int date=14;
 		driver.findElement(By.xpath("//td[@class='current day']/ancestor::tbody/descendant::td[.='"+date+"']")).click();
 		
 		driver.findElement(By.xpath("//button[@id='search_btn']")).click();
+		
 		String found = driver.findElement(By.xpath("//span[@class='f-bold busFound']")).getText();
 		String[] no = found.split(" ");
 		int total=Integer.parseInt(no[0]);
+		Reporter.log("Fetching no of bus present "+total,true);
 		
 		JavascriptExecutor js=(JavascriptExecutor) driver;
 		int count=0;
@@ -55,13 +55,14 @@ public class RedBusAppPrintAllBuses {
 		count=busNames.size();
 		}
 		int i=1;
+		Reporter.log("Fetching bus names",true);
 		for(WebElement ele:busNames){
 			String BusName = ele.getText();
-			System.out.println(i+")"+BusName);
+			Reporter.log(i+")"+BusName,true);
 			i++;
 		}
 		if(count==total){
-			System.out.println("Bus count is matching");
+			Reporter.log("Bus count is matching",true);
 		}else{
 			Assert.fail();
 		}

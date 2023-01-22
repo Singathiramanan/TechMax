@@ -26,6 +26,7 @@ public class ItestLisImpClass implements ITestListener  {
 	}
 
 	public void onFinish(ITestContext arg0) {
+		test.log(Status.INFO, "Browser is closed");
 		extentReporter.flush();
 	}
 
@@ -33,15 +34,16 @@ public class ItestLisImpClass implements ITestListener  {
 
 		ExtentSparkReporter extentSparkreports = new ExtentSparkReporter(
 				"./ExtentReports/" + new JavaUtility().getSystemDateInIST() + ".html");
-		extentSparkreports.config().setDocumentTitle("TechMax-Reports");
+		extentSparkreports.config().setDocumentTitle("Redbus-Reports");
 		extentSparkreports.config().setTheme(Theme.DARK);
-		extentSparkreports.config().setReportName("TechMax-SuiteExecution");
+		extentSparkreports.config().setReportName("BusCountMatchingTo");
+		extentSparkreports.config().setTimelineEnabled(true);
 		extentReporter = new ExtentReports();
 		extentReporter.attachReporter(extentSparkreports);
-		extentReporter.setSystemInfo("Reporter", "Praveen");
-		extentReporter.setSystemInfo("OS", "Windows-11");
+		extentReporter.setSystemInfo("Reporter", "venkat");
+		extentReporter.setSystemInfo("OS", "Windows-10");
 		extentReporter.setSystemInfo("Browser", "chrome");
-		extentReporter.setSystemInfo("URL", "http://192.168.0.190/domain/Sales_And_Inventory_System/pages/pos.php");
+		extentReporter.setSystemInfo("URL", "http://www.Redbus.in");
 
 	}
 
@@ -54,6 +56,9 @@ public class ItestLisImpClass implements ITestListener  {
 	public void onTestStart(ITestResult result) {
 
 		test = extentReporter.createTest(result.getMethod().getMethodName());
+		test.log(Status.INFO, "Browser is lanched");
+		
+		
 	}
 	// String testCaseName = result.getMethod().getMethodName();
 	// EventFiringWebDriver edriver=new EventFiringWebDriver(BaseClass.sdriver);
