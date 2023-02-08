@@ -185,7 +185,7 @@ public class WebDriverUtility {
 	 */
 	public void mouseOverOnElement(WebDriver driver, WebElement elemnet) {
 		Actions act = new Actions(driver);
-		act.moveToElement(elemnet).perform();
+		act.moveToElement(elemnet).perform();	
 	}
 
 	/**
